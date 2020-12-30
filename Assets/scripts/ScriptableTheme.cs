@@ -1,0 +1,12 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+[CreateAssetMenu(menuName = "My Assets/ScriptableTheme")]
+[Serializable]
+public class ScriptableTheme : ScriptableObject
+{
+    public ScriptableSubTheme[] scriptableSubThemes;
+    public string themeTitle;
+}
