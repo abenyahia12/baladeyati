@@ -9,6 +9,6 @@ public class SubThemeView : MonoBehaviour
     public ScriptableSubTheme ScriptableSubTheme;
     public TextMeshProUGUI subthemeTitle;
     public TextMeshProUGUI subthemeNumberTitle;
-    public TextMeshProUGUI ticketsNumberText;
     public Button SubThemeButton;
+    public Image SubThemeImage;
 }

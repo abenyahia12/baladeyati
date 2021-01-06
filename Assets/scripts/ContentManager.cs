@@ -1,7 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Paroxe.PdfRenderer;
+using TMPro;
 using UnityEngine;
-
+using UnityEngine.UI;
+using ArabicSupport;
 public class ContentManager : MonoBehaviour
 {
     public CanvasGroup[] canvasGroups;
@@ -15,9 +18,32 @@ public class ContentManager : MonoBehaviour
     public GameObject ticketTextElementPrefab;
     public GameObject ticketPhotoElementPrefab;
     public ScriptableTheme[] scriptableThemes;
+    public TextMeshProUGUI[] MenuMawdhiTexts;
+    public Button[] MenuMawdhiButtons;
+    public PDFViewer PDFViewer;
+    public VideoManager videoManager;
+    public Dictionary<string,GameObject> SearchObjs=new Dictionary<string, GameObject>();
+    public TMP_InputField searchText;
+    public GameObject loop;
+    public TextMeshProUGUI SubThemesThemeTitle;
+    public string subthemename;
     private void Start()
     {
         GenerateThemes();
+        SetupSideMenu();
+    }
+
+    void SetupSideMenu()
+    {
+        for (int i = 0; i < scriptableThemes.Length; i++)
+        {
+            MenuMawdhiTexts[i].text = scriptableThemes[i].themeTitle;
+        }
+    }
+    public void ActivateSearch(bool x)
+    {
+        searchText.gameObject.SetActive(x);
+        loop.SetActive(x);
     }
     public void ActivateCanvasGroup(int index)
     {
@@ -46,101 +72,171 @@ public class ContentManager : MonoBehaviour
             Destroy(child.gameObject);
         }
     }
-
-    void GenerateThemes()
+    void CleanSearchObjs()
     {
+        SearchObjs.Clear();
+    }
+    public void Search()
+    {
+        foreach (var item in SearchObjs)
+        {
+
+            if (ArabicFixer.Fix(item.Key).Contains(searchText.text))
+            {
+                item.Value.SetActive(true);
+            }
+            else
+            {
+                item.Value.SetActive(false);
+            }
+        }
+    }
+    public void GenerateThemes()
+    {
+        CleanSearchObjs();
         CleanParent(ThemeParent);
         for (int i = 0; i < scriptableThemes.Length; i++)
         {
             CreateTheme(scriptableThemes[i]);
         }
+        ActivateSearch(true);
+
     }
     void CreateTheme(ScriptableTheme scriptableTheme)
     {
         GameObject go = Instantiate(themePrefab, ThemeParent);
         ThemeView themeView = go.GetComponent<ThemeView>();
+        themeView.themeImage.sprite = scriptableTheme.themeImage;
         themeView.ScriptableTheme = scriptableTheme;
         themeView.themeTitle.text = scriptableTheme.themeTitle;
-        themeView.themeButton.onClick.AddListener(() => GenerateSubThemes(scriptableTheme.scriptableSubThemes));
+        SearchObjs.Add(scriptableTheme.themeTitle, go);
+        FixArabic(themeView.themeTitle);
+        themeView.themeButton.onClick.AddListener(() => GenerateSubThemes(scriptableTheme.scriptableSubThemes, scriptableTheme.videoName, scriptableTheme.themeTitle));
     }
-    void GenerateSubThemes(ScriptableSubTheme[] scriptableSubThemes)
+    void GenerateSubThemes(ScriptableSubTheme[] scriptableSubThemes,string videoName,string title)
     {
+        SubThemesThemeTitle.text = title;
+        FixArabic(SubThemesThemeTitle);
+        CleanSearchObjs();
         CleanParent(SubMawadhiParent);
         for (int i = 0; i < scriptableSubThemes.Length; i++)
         {
             CreateSubTheme(scriptableSubThemes[i], i);
         }
+        videoManager.SetupLink(videoName);
+        ActivateSearch(true);
         SwitchCanvastoSubThemes();
     }
-    void CreateSubTheme(ScriptableSubTheme scriptableTheme,int index)
+    public void GenerateSubThemes(int index)
+    {
+        CleanParent(SubMawadhiParent);
+        CleanSearchObjs();
+        for (int i = 0; i < scriptableThemes[index].scriptableSubThemes.Length; i++)
+        {
+            CreateSubTheme(scriptableThemes[index].scriptableSubThemes[i], i);
+        }
+        videoManager.SetupLink(scriptableThemes[index].videoName);
+        ActivateSearch(true);
+        CleanSearchObjs();
+        SwitchCanvastoSubThemes();
+    }
+    void CreateSubTheme(ScriptableSubTheme scriptableSubTheme,int index)
     {
         GameObject go = Instantiate(subThemePrefab, SubMawadhiParent);
         SubThemeView subthemeView = go.GetComponent<SubThemeView>();
-        subthemeView.ScriptableSubTheme = scriptableTheme;
-        subthemeView.subthemeTitle.text = scriptableTheme.subThemeTitle;
-        subthemeView.subthemeNumberTitle.text = (index + 1).ToString(); ;
-        subthemeView.ticketsNumberText.text = scriptableTheme.scriptableTickets.Length.ToString();
-        subthemeView.SubThemeButton.onClick.AddListener(() => GenerateTickets(scriptableTheme.scriptableTickets));
+        subthemeView.SubThemeImage.sprite = scriptableSubTheme.subthemeImage;
+        subthemeView.ScriptableSubTheme = scriptableSubTheme;
+        subthemeView.subthemeTitle.text = scriptableSubTheme.subThemeTitle;
+        SearchObjs.Add(scriptableSubTheme.subThemeTitle, go);
+        FixArabic(subthemeView.subthemeTitle);
+        subthemeView.subthemeNumberTitle.text =(index + 1).ToString(); ;
+        subthemeView.SubThemeButton.onClick.AddListener(() => GenerateTickets(scriptableSubTheme.scriptableTickets));
     }
     void GenerateTickets(ScriptableTicket[] scriptableTickets)
     {
+        CleanSearchObjs();
         CleanParent(TicketsParent);
         for (int i = 0; i < scriptableTickets.Length; i++)
         {
             CreateTicket(scriptableTickets[i], i);
         }
+        ActivateSearch(true);
         SwitchCanvastoTickets();
     }
     void CreateTicket(ScriptableTicket scriptableTicket, int index)
     {
         GameObject go = Instantiate(ticketPrefab, TicketsParent);
         TicketView ticketView= go.GetComponent<TicketView>();
+        if(scriptableTicket.ticketImage)
+        ticketView.ticketImage.sprite = scriptableTicket.ticketImage;
         ticketView.scriptableTicket = scriptableTicket;
         ticketView.TicketTitle.text = scriptableTicket.ticketTitle;
-        ticketView.TicketNumberTitle.text = (index + 1).ToString();
-        ticketView.TicketButton.onClick.AddListener(() => GenerateTicketElements(scriptableTicket.ticketElements));
+        SearchObjs.Add(scriptableTicket.ticketTitle, go);
+        FixArabic(ticketView.TicketTitle);
+        ticketView.TicketButton.onClick.AddListener(() => ShowTicketPDF(scriptableTicket.ticketElement, scriptableTicket.ticketElement.videoName));
     }
-    void GenerateTicketElements(ticketElement[] ticketElements)
+    void ShowTicketPDF(ticketElement ticketElement,string videoName)
     {
-        CleanParent(MainTicketParent);
-        for (int i = 0; i < ticketElements.Length; i++)
-        {
-            CreateElement(ticketElements[i], i);
-        }
-        SwitchCanvastoTicketElements();
+        CreateElement(ticketElement);
+        videoManager.SetupLink(videoName);
+        ActivateSearch(false);
+        CleanSearchObjs();
+        SwitchCanvastoTicketElement();
     }
-    void CreateElement(ticketElement ticketElement, int index)
+    void CreateElement(ticketElement ticketElement)
     {
-
-        if (ticketElement.type == Element.Photo)
-        {
-            GameObject go = Instantiate(ticketPhotoElementPrefab, MainTicketParent);
-            TicketElementView ticketElementView = go.GetComponent<TicketElementView>();
-            ticketElementView.ticketElement = ticketElement;
-            ticketElementView.image.sprite = ticketElement.photo;
-        }
-        else if (ticketElement.type == Element.Text)
-        {
-            GameObject go = Instantiate(ticketTextElementPrefab, MainTicketParent);
-            TicketElementView ticketElementView = go.GetComponent<TicketElementView>();
-            ticketElementView.ticketElement = ticketElement;
-            ticketElementView.text.text = ticketElement.text;
-        }
+        PDFViewer.FileName = ticketElement.pdfTitle+".pdf";
+        //if (ticketElement.type == Element.Photo)
+        //{
+        //    GameObject go = Instantiate(ticketPhotoElementPrefab, MainTicketParent);
+        //    TicketElementView ticketElementView = go.GetComponent<TicketElementView>();
+        //    ticketElementView.ticketElement = ticketElement;
+        //    ticketElementView.image.sprite = ticketElement.photo;
+        //}
+        //else if (ticketElement.type == Element.Text)
+        //{
+        //    GameObject go = Instantiate(ticketTextElementPrefab, MainTicketParent);
+        //    TicketElementView ticketElementView = go.GetComponent<TicketElementView>();
+        //    ticketElementView.ticketElement = ticketElement;
+        //    ticketElementView.text.text = ticketElement.text;
+        //}
+    }
+    public void ActivatePDFVIEWER(bool x)
+    {
+        MainTicketParent.gameObject.SetActive(x);
     }
     public void SwitchCanvastoSubThemes()
     {
         ActivateCanvasGroup(1);
+        ActivatePDFVIEWER(false);
     }
     public void SwitchCanvastoTickets()
     {
         ActivateCanvasGroup(2);
+        ActivatePDFVIEWER(false);
     }
-    public void SwitchCanvastoTicketElements()
+    public void SwitchCanvastoTicketElement()
     {
         ActivateCanvasGroup(3);
+        ActivatePDFVIEWER(true);
     }
     public void SwitchCanvastoThemes()
     {
+        ActivateSearch(true);
         ActivateCanvasGroup(0);
+        ActivatePDFVIEWER(false);
+    }
+    public void FixArabic(TextMeshProUGUI textMeshProUGUI)
+    {
+        textMeshProUGUI.text = ArabicFixer.Fix(textMeshProUGUI.text, false, false);
+    }
+    public string FixArabic(string text)
+    {
+        return ArabicFixer.Fix(text, false, false);
+    }
+    public void FixArabicc(TMP_InputField tMP_InputField)
+    {
+        
+        tMP_InputField.text = ArabicFixer.Fix(tMP_InputField.text, false, false);
     }
 }

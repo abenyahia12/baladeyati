@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: SubTheme 2
   m_EditorClassIdentifier: 
   scriptableTickets: []
-  subThemeTitle: 
+  subThemeTitle: "\u0633\u0644\u0627\u0645 "
+  subthemeImage: {fileID: 21300000, guid: e49db66876b94a94c9758f5aae41d59b, type: 3}

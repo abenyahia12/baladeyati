@@ -9,4 +9,5 @@ public class ThemeView : MonoBehaviour
     public ScriptableTheme ScriptableTheme;
     public TextMeshProUGUI themeTitle;
     public Button themeButton;
+    public Image themeImage;
 }

@@ -12,4 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7694f70376a2e964cb13d0a08f1d69b7, type: 3}
   m_Name: Ticket2
   m_EditorClassIdentifier: 
-  ticketTitle: 
+  ticketTitle: "\u0633\u0644\u0633\u0644\u0633\u0644\u0633\u0644\u0633\u0644"
+  ticketElement:
+    type: 0
+    photo: {fileID: 0}
+    text: 
+    pdfTitle: 
+    videoName: 
+  ticketImage: {fileID: 0}

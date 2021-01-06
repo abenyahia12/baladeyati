@@ -15,4 +15,8 @@ MonoBehaviour:
   scriptableSubThemes:
   - {fileID: 11400000, guid: a1223cb44db508849a4016db3812dd5f, type: 2}
   - {fileID: 11400000, guid: bb47cccc0db5d8449b99acf1e4377c38, type: 2}
-  themeTitle: mawdhou3 1
+  - {fileID: 11400000, guid: 5cc97bf823c99384e8d312f628c32865, type: 2}
+  - {fileID: 11400000, guid: e2244cb62d945d7478f00d79eea7fa70, type: 2}
+  themeTitle: "\u0633\u0644\u0627\u0645 \u0639\u0644\u064A\u0643\u0645"
+  videoName: astrid.mp4
+  themeImage: {fileID: 21300000, guid: 0a330173e860f0a449c8b4dc201043d2, type: 3}

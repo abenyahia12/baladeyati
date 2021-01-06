@@ -9,4 +9,6 @@ public class ScriptableTheme : ScriptableObject
 {
     public ScriptableSubTheme[] scriptableSubThemes;
     public string themeTitle;
+    public string videoName;
+    public Sprite themeImage;
 }

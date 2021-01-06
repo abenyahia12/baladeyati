@@ -7,8 +7,6 @@ using UnityEngine.UI;
 public class TicketElementView : MonoBehaviour
 {
     public ticketElement ticketElement;
-    public TextMeshProUGUI text;
     public Image image;
-
-
+    public string pdfTitle;
 }

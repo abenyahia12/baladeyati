@@ -1,20 +1,12 @@
 using UnityEngine;
 using System.Collections;
 using ArabicSupport;
-
+using TMPro;
+using UnityEngine.UI;
 public class FixGUITextCS : MonoBehaviour {
-	
-	public string text;
-	public bool tashkeel = true;
-	public bool hinduNumbers = true;
-	
-	// Use this for initialization
+	TextMeshProUGUI text;
 	void Start () {
-		gameObject.GetComponent<GUIText>().text = ArabicFixer.Fix(text, tashkeel, hinduNumbers);
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+		text = gameObject.GetComponent<TextMeshProUGUI>();
+		text.text= ArabicFixer.Fix(text.text, false, false);
 	}
 }

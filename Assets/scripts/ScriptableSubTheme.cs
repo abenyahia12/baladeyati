@@ -9,4 +9,5 @@ public class ScriptableSubTheme : ScriptableObject
 {
     public ScriptableTicket[] scriptableTickets;
     public string subThemeTitle;
+    public Sprite subthemeImage;
 }
