@@ -17,6 +17,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bb47cccc0db5d8449b99acf1e4377c38, type: 2}
   - {fileID: 11400000, guid: 5cc97bf823c99384e8d312f628c32865, type: 2}
   - {fileID: 11400000, guid: e2244cb62d945d7478f00d79eea7fa70, type: 2}
-  themeTitle: "\u0633\u0644\u0627\u0645 \u0639\u0644\u064A\u0643\u0645"
+  themeTitle: "\u0627\u0644\u0627\u062F\u0627\u0631\u0629 \u0627\u0644\u0628\u0644\u062F\u064A\u0629"
   videoName: astrid.mp4
-  themeImage: {fileID: 21300000, guid: 0a330173e860f0a449c8b4dc201043d2, type: 3}
+  themeImage: {fileID: 21300000, guid: 002783a767cbdf94aa18fa4b495a7851, type: 3}

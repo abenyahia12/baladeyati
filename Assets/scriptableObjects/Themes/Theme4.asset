@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Theme4
   m_EditorClassIdentifier: 
   scriptableSubThemes: []
-  themeTitle: "\u0645\u0648\u0636\u0648\u0639 \u0631\u0627\u0628\u0639"
+  themeTitle: "\u0627\u0644\u062A\u062E\u0637\u064A\u0637 \u0627\u0644\u0639\u0645\u0631\u0627\u0646\u064A"
   videoName: astrid.mp4
-  themeImage: {fileID: 21300000, guid: 0a330173e860f0a449c8b4dc201043d2, type: 3}
+  themeImage: {fileID: 21300000, guid: 71acdac164d9c37429b5c12ab711da75, type: 3}
