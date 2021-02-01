@@ -605,7 +605,9 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114403494865243592, guid: ac79ad8e6e834b64595a8f8fdb1ff0a4, type: 3}
+    - {fileID: 114062056633569362, guid: ac79ad8e6e834b64595a8f8fdb1ff0a4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ac79ad8e6e834b64595a8f8fdb1ff0a4, type: 3}
 --- !u!1 &170076733
 GameObject:
@@ -1038,6 +1040,13 @@ MonoBehaviour:
   loop: {fileID: 1182575980}
   SubThemesThemeTitle: {fileID: 81280157}
   subthemename: "\u062C\u0630\u0627\u0630\u0629"
+  fileName: save.dat
+  tickets:
+  - {fileID: 11400000, guid: 9a08c1371b1b66f40979e606be85e1c7, type: 2}
+  - {fileID: 11400000, guid: 73cb6b7cdd2d5f445a8cced307545186, type: 2}
+  - {fileID: 11400000, guid: 2b6e7afc6368e7141a52f6c0ab831877, type: 2}
+  - {fileID: 11400000, guid: 868862d645323754c9bc06cc3864709a, type: 2}
+  - {fileID: 11400000, guid: 65d098b0f74878e44bc98659e5c6f226, type: 2}
 --- !u!114 &200898501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1762,7 +1771,7 @@ PrefabInstance:
     - target: {fileID: 224156839030853666, guid: afce95f4551c2874ebead8c06b7ae74f,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.00006098822
+      value: -0.000061035156
       objectReference: {fileID: 0}
     - target: {fileID: 224252496224420302, guid: afce95f4551c2874ebead8c06b7ae74f,
         type: 3}
@@ -1987,7 +1996,7 @@ PrefabInstance:
     - target: {fileID: 224445794603946258, guid: afce95f4551c2874ebead8c06b7ae74f,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.00006098822
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224699257769325976, guid: afce95f4551c2874ebead8c06b7ae74f,
         type: 3}
@@ -3515,6 +3524,79 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72c043ab5cb6f77489f9d408bdb8fbc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &390750917 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1280549201837976, guid: ac79ad8e6e834b64595a8f8fdb1ff0a4,
+    type: 3}
+  m_PrefabInstance: {fileID: 166589215}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &390750918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390750917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 2109663825, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 390750922}
+  toggleTransition: 1
+  graphic: {fileID: 0}
+  m_Group: {fileID: 0}
+  onValueChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 200898500}
+        m_MethodName: GenerateFavoriteTickets
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_IsOn: 0
+--- !u!114 &390750922 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114829039182027560, guid: ac79ad8e6e834b64595a8f8fdb1ff0a4,
+    type: 3}
+  m_PrefabInstance: {fileID: 166589215}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390750917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &403249098

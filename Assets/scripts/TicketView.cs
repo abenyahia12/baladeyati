@@ -11,4 +11,6 @@ public class TicketView : MonoBehaviour
     public Button likeButton;
     public Button TicketButton;
     public Image ticketImage;
+    public Animator animator;
+
 }

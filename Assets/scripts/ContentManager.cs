@@ -27,10 +27,33 @@ public class ContentManager : MonoBehaviour
     public GameObject loop;
     public TextMeshProUGUI SubThemesThemeTitle;
     public string subthemename;
+    public string fileName =  "save.dat";
+    public List<ScriptableTicket> tickets;
     private void Start()
     {
         GenerateThemes();
         SetupSideMenu();
+        //SaveList();
+        LoadeList();
+    }
+    void SaveList()
+    {
+        List<string> temp = new List<string>();
+        //foreach (var item in tickets)
+        //{
+        //    temp.Add(item.ticketTitle);
+        //}
+        DataHandler.SaveList(temp, fileName);
+
+    }
+    void LoadeList()
+    {
+        List<string> temp = new List<string>();
+        temp = DataHandler.LoadList(fileName);
+        foreach (var item in temp)
+        {
+            Debug.Log(item);
+        }
     }
 
     void SetupSideMenu()
@@ -158,12 +181,30 @@ public class ContentManager : MonoBehaviour
         CleanParent(TicketsParent);
         for (int i = 0; i < scriptableTickets.Length; i++)
         {
-            CreateTicket(scriptableTickets[i], i);
+            CreateTicket(scriptableTickets[i]);
         }
         ActivateSearch(true);
         SwitchCanvastoTickets();
     }
-    void CreateTicket(ScriptableTicket scriptableTicket, int index)
+    public void GenerateFavoriteTickets()
+    {
+        CleanSearchObjs();
+        CleanParent(TicketsParent);
+        List<string> favorites=DataHandler.LoadList(fileName);
+        if(favorites.Count>0)
+        { 
+            for (int i = 0; i < tickets.Count; i++)
+            {
+                if (favorites.Contains(tickets[i].ticketTitle))
+                { 
+                CreateTicket(tickets[i]);
+                }
+            }
+            SwitchCanvastoTickets();
+        }
+        ActivateSearch(true);
+    }
+    void CreateTicket(ScriptableTicket scriptableTicket)
     {
         GameObject go = Instantiate(ticketPrefab, TicketsParent);
         TicketView ticketView= go.GetComponent<TicketView>();
@@ -174,6 +215,31 @@ public class ContentManager : MonoBehaviour
         SearchObjs.Add(scriptableTicket.ticketTitle, go);
         FixArabic(ticketView.TicketTitle);
         ticketView.TicketButton.onClick.AddListener(() => ShowTicketPDF(scriptableTicket.ticketElement, scriptableTicket.ticketElement.videoName));
+        bool x = checkIfLiked(ticketView.scriptableTicket.ticketTitle);
+        ticketView.animator.SetBool("Pressed",x);
+        ticketView.likeButton.onClick.AddListener(() => likeTicket(ticketView));
+    }
+    bool checkIfLiked(string title)
+    {
+        List<string> temp = new List<string>();
+        temp = DataHandler.LoadList(fileName);
+        return temp.Contains(title);
+    }
+    void likeTicket( TicketView ticketView )
+    {
+        List<string> temp = new List<string>();
+        temp = DataHandler.LoadList(fileName);
+        bool x = temp.Contains(ticketView.scriptableTicket.ticketTitle);
+        ticketView.animator.SetBool("Pressed", !x);
+        if (x)
+        {
+            temp.Remove(ticketView.scriptableTicket.ticketTitle);
+        }
+        else
+        {
+            temp.Add(ticketView.scriptableTicket.ticketTitle);
+        }
+        DataHandler.SaveList(temp, fileName);
     }
     void ShowTicketPDF(ticketElement ticketElement,string videoName)
     {
