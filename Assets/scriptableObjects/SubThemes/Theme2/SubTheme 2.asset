@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de39d01b5bee70c489c69e4831121ee7, type: 3}
+  m_Name: SubTheme 2
+  m_EditorClassIdentifier: 
+  scriptableTickets:
+  - {fileID: 11400000, guid: 70e4826a1d4fbc74a847b99cd8791123, type: 2}
+  - {fileID: 11400000, guid: e670eed35f227ed4bacaeb43d7b796b7, type: 2}
+  - {fileID: 11400000, guid: 5f65f0010f5cc184bb5fd340f1ccb127, type: 2}
+  - {fileID: 11400000, guid: 4699225606751d447943028bc997c8a2, type: 2}
+  subThemeTitle: "\u062A\u0646\u0645\u064A\u0629 \u0627\u0644\u0645\u0648\u0627\u0631\u062F
+    \u0627\u0644\u0628\u0644\u062F\u064A\u0629 Mobilisation des ressources municipales"
+  subthemeImage: {fileID: 21300000, guid: 09fa12443b63108448dc8dc4002f8a6a, type: 3}

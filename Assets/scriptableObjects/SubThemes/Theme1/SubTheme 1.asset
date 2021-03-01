@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de39d01b5bee70c489c69e4831121ee7, type: 3}
   m_Name: SubTheme 1
   m_EditorClassIdentifier: 
-  scriptableTickets: []
-  subThemeTitle: "\u0639\u0644\u064A\u0643\u0645"
+  scriptableTickets:
+  - {fileID: 11400000, guid: 4a58b6a1343d36f4398e3cc43f5e6719, type: 2}
+  - {fileID: 11400000, guid: 5c5a8d525a279ae4f94fbe7785c38076, type: 2}
+  subThemeTitle: "\u0627\u0644\u0633\u0644\u0637\u0629 \u0627\u0644\u062A\u0631\u062A\u064A\u0628\u064A\u0629
+    Le pouvoir reglementaire "
   subthemeImage: {fileID: 21300000, guid: 3800f5775e256fd468724544c9602bd2, type: 3}

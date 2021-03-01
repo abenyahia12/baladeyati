@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de39d01b5bee70c489c69e4831121ee7, type: 3}
   m_Name: SubTheme 2
   m_EditorClassIdentifier: 
-  scriptableTickets: []
-  subThemeTitle: "\u0633\u0644\u0627\u0645 "
+  scriptableTickets:
+  - {fileID: 11400000, guid: 021d5f50d0729f54d92ca7e90f77fb60, type: 2}
+  - {fileID: 11400000, guid: e5c66f79e8ad8fa4793ff92c18cb102b, type: 2}
+  - {fileID: 11400000, guid: 74c5c4b50de3f8348991e7f247ea0abc, type: 2}
+  subThemeTitle: "APPROCHE PARTICIPATIVE  \u0627\u0644\u0645\u0642\u0627\u0631\u0628\u0629
+    \u0627\u0644\u062A\u0634\u0627\u0631\u0643\u064A\u0629"
   subthemeImage: {fileID: 21300000, guid: e49db66876b94a94c9758f5aae41d59b, type: 3}

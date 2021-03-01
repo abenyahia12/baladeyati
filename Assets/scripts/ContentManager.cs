@@ -186,23 +186,31 @@ public class ContentManager : MonoBehaviour
         ActivateSearch(true);
         SwitchCanvastoTickets();
     }
-    public void GenerateFavoriteTickets()
+    public void GenerateFavoriteTickets(Toggle x)
     {
-        CleanSearchObjs();
-        CleanParent(TicketsParent);
-        List<string> favorites=DataHandler.LoadList(fileName);
-        if(favorites.Count>0)
-        { 
-            for (int i = 0; i < tickets.Count; i++)
+        if (x.isOn)
+        {
+            CleanSearchObjs();
+            CleanParent(TicketsParent);
+            List<string> favorites = DataHandler.LoadList(fileName);
+            if (favorites.Count > 0)
             {
-                if (favorites.Contains(tickets[i].ticketTitle))
-                { 
-                CreateTicket(tickets[i]);
+                for (int i = 0; i < tickets.Count; i++)
+                {
+                    if (favorites.Contains(tickets[i].ticketTitle))
+                    {
+                        CreateTicket(tickets[i]);
+                    }
                 }
+                SwitchCanvastoTickets();
             }
-            SwitchCanvastoTickets();
+            ActivateSearch(true);
         }
-        ActivateSearch(true);
+        else
+        {
+            SwitchCanvastoThemes();
+            GenerateThemes();
+        }
     }
     void CreateTicket(ScriptableTicket scriptableTicket)
     {

@@ -9,20 +9,29 @@ public class DataHandler : MonoBehaviour
     public static void SaveList(List<string> yourList,string filename)
     {
       
-        FileStream fs = new FileStream(filename, FileMode.Create);
+        FileStream fs = new FileStream(Path.Combine(Application.persistentDataPath, filename), FileMode.Create,FileAccess.ReadWrite);
         BinaryFormatter bf = new BinaryFormatter();
         bf.Serialize(fs, yourList);
         fs.Close();
     }
     public static List<string> LoadList(string filename)
     {
-        using (Stream stream = File.Open(filename, FileMode.Open))
+        try
         {
-            var bformatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
+            using (Stream stream = File.Open(Path.Combine(Application.persistentDataPath, filename), FileMode.Open))
+            {
+                var bformatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
 
-            List<string> items = (List<string>)bformatter.Deserialize(stream);
-            return items;
+                List<string> items = (List<string>)bformatter.Deserialize(stream);
+                return items;
+            }
         }
+        catch (System.Exception)
+        {
+
+            return new List<string>();
+        }    
+       
     }
 
 }
