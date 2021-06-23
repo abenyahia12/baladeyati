@@ -19,7 +19,7 @@ public class DisableDevice : MonoBehaviour
         www.SetRequestHeader("Authorization", " Bearer " + PlayerPrefs.GetString("token"));
         yield return www.SendWebRequest();
 
-        if (www.isNetworkError || www.isHttpError)
+        if (www.result == UnityWebRequest.Result.ConnectionError || www.result== UnityWebRequest.Result.ProtocolError)
         {
             HandleErrors(www);
         }
@@ -31,11 +31,12 @@ public class DisableDevice : MonoBehaviour
 
     private void HandleErrors(UnityWebRequest www)
     {
-        if (www.isNetworkError)
+
+            if (www.result == UnityWebRequest.Result.ConnectionError)
         {
             m_errorHandler.DisplayError(ErrorHandler.Error.NetworkError, "Network Error");
         }
-        else if (www.isHttpError)
+        else if (www.result == UnityWebRequest.Result.ProtocolError)
         {
             m_errorHandler.DisplayError(ErrorHandler.Error.NetworkError, www.responseCode + ": " + www.error);
         }

@@ -21,7 +21,7 @@ public class ContentManager : MonoBehaviour
     public TextMeshProUGUI[] MenuMawdhiTexts;
     public Button[] MenuMawdhiButtons;
     public PDFViewer PDFViewer;
-    public VideoManager videoManager;
+    public AzizVideoManager videoManager;
     public Dictionary<string,GameObject> SearchObjs=new Dictionary<string, GameObject>();
     public TMP_InputField searchText;
     public GameObject loop;
@@ -212,6 +212,7 @@ public class ContentManager : MonoBehaviour
             GenerateThemes();
         }
     }
+
     void CreateTicket(ScriptableTicket scriptableTicket)
     {
         GameObject go = Instantiate(ticketPrefab, TicketsParent);

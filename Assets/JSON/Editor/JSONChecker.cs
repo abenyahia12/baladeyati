@@ -2,6 +2,7 @@
 
 using UnityEngine;
 using UnityEditor;
+using UnityEngine.Networking;
 
 public class JSONChecker : EditorWindow {
 	string JSON = @"{
@@ -45,13 +46,13 @@ public class JSONChecker : EditorWindow {
 		URL = EditorGUILayout.TextField("URL", URL);
 		if (GUILayout.Button("Get JSON")) {
 			Debug.Log(URL);
-			WWW test = new WWW(URL);
+			UnityWebRequest test = new UnityWebRequest(URL);
 			while (!test.isDone) ;
 			if (!string.IsNullOrEmpty(test.error)) {
 				Debug.Log(test.error);
 			} else {
-				Debug.Log(test.text);
-				j = new JSONObject(test.text);
+				Debug.Log(test.downloadHandler.text);
+				j = new JSONObject(test.downloadHandler.text);
 				Debug.Log(j.ToString(true));
 			}
 		}

@@ -141,8 +141,8 @@ public class PDFModel : MonoBehaviour
 				m_DC.UpdateDownloadStatus(m_downloadProgress);
 				yield return null;
 			}
-
-			if (www.isNetworkError || www.isHttpError)
+			
+			if (www.result == UnityWebRequest.Result.ConnectionError || www.result == UnityWebRequest.Result.ProtocolError)
 			{
 				m_DC.SummonErrorWindow("Network or HTTP Error: " + www.responseCode + " " + www.error);
 				Info.AlreadyLoaded = false;

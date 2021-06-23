@@ -37,7 +37,7 @@ public static class IconHandler
 		www.SetRequestHeader("Authorization", " Bearer " + PlayerPrefs.GetString("token"));
 		yield return www.SendWebRequest();
 
-		if (www.isNetworkError || www.isHttpError)
+		if (www.result == UnityWebRequest.Result.ConnectionError || www.result == UnityWebRequest.Result.ProtocolError)
 		{
 			// If offline or something else has gone wrong, get unknown sprite
 			yield break;

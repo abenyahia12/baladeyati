@@ -23,6 +23,6 @@ MonoBehaviour:
     type: 0
     photo: {fileID: 0}
     text: 
-    pdfTitle: 
+    pdfTitle: fiche_type
     videoName: 
   ticketImage: {fileID: 0}

@@ -101,7 +101,7 @@ public class DownloadPDFs : MonoBehaviour
 		www.SetRequestHeader("Authorization", " Bearer " + PlayerPrefs.GetString("token"));
 		yield return www.SendWebRequest();
 
-		if (www.isNetworkError || www.isHttpError)
+		if (www.result == UnityWebRequest.Result.ConnectionError || www.result == UnityWebRequest.Result.ProtocolError)
 		{
 			HandleErrors(www);
 			yield break;
@@ -279,11 +279,12 @@ public class DownloadPDFs : MonoBehaviour
 
 	private void HandleErrors(UnityWebRequest www)
 	{
-		if (www.isNetworkError)
-		{
+		if (www.result == UnityWebRequest.Result.ConnectionError) 
+		{ 
 			m_errorHandler.DisplayError(ErrorHandler.Error.NetworkError, "Network Error");
 		}
-		else if (www.isHttpError)
+		else if (www.result == UnityWebRequest.Result.ProtocolError)
+		
 		{
 			string jsonErrorData = Encoding.UTF8.GetString(www.downloadHandler.data, 0, www.downloadHandler.data.Length);
 			JSONObject jsonErrorObject = new JSONObject(jsonErrorData);

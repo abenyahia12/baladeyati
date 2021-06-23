@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
-public class VideoManager : MonoBehaviour
+public class AzizVideoManager : MonoBehaviour
 {
     [SerializeField] RawImage m_PlayTexture;
     [SerializeField] VideoPlayer m_VideoPlayer;
