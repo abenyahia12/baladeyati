@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7694f70376a2e964cb13d0a08f1d69b7, type: 3}
+  m_Name: Ticket48
+  m_EditorClassIdentifier: 
+  ticketTitle: "-46 \u062C\u0648\u062F\u0629 \u0627\u0644\u062D\u064A\u0627\u0629
+    \u0648\u0627\u0644\u0645\u062D\u064A\u0637"
+  ticketElement:
+    type: 0
+    photo: {fileID: 0}
+    text: 
+    pdfTitle: "46- \u062C\u0648\u062F\u0629 \u0627\u0644\u062D\u064A\u0627\u0629
+      \u0648\u0627\u0644\u0645\u062D\u064A\u0637"
+    videoIndex: 0
+    ReferenceURLS:
+    - http://www.arp.tn/site/loi/AR/fiche_loi.jsp?cl=20092
+    - https://marsd.daamdth.org/2018/02/23/%D9%82%D8%A7%D9%86%D9%88%D9%86-%D8%B9%D8%AF%D8%AF-34-%D9%84%D8%B3%D9%86%D8%A9-2007-%D9%85%D8%A4%D8%B1%D8%AE-%D9%81%D9%8A-4-%D8%AC%D9%88%D8%A7%D9%86-2007-%D9%8A%D8%AA%D8%B9%D9%84%D9%82-%D8%A8%D9%86/#:~:text=%D8%A7%D9%84%D9%81%D8%B5%D9%84%20%D8%A7%D9%84%D8%A3%D9%88%D9%84%20%D9%80%20%D9%8A%D9%87%D8%AF%D9%81%20%D9%87%D8%B0%D8%A7,%D8%A8%D9%8A%D8%A6%D8%A9%20%D8%B3%D9%84%D9%8A%D9%85%D8%A9%20%D9%88%D8%B6%D9%85%D8%A7%D9%86%D8%A7%20%D9%84%D8%AA%D9%86%D9%85%D9%8A%D8%A9%20%D9%85%D8%B3%D8%AA%D8%AF%D9%8A%D9%85%D8%A9.
+    - http://www.arp.tn/site/servlet/Fichier?code_obj=93274&code_exp=1&langue=1#:~:text=%D9%82%D8%A7%D9%86%D9%88%D9%86%20%D8%B9%D8%AF%D8%AF%2030%20%D9%84%D8%B3%D9%86%D8%A9%202016,%D8%A7%D9%84%D8%B5%D8%AD%D8%A9%20%D8%A8%D8%A7%D9%84%D9%85%D9%86%D8%A7%D8%B7%D9%82%20%D8%A7%D9%84%D8%B1%D8%A7%D8%AC%D8%B9%D8%A9%20%D9%84%D9%84%D8%AC%D9%85%D8%A7%D8%B9%D8%A7%D8%AA%20%D8%A7%D9%84%D9%85%D8%AD%D9%84%D9%8A%D8%A9.&text=%D9%88%D8%A8%D8%B9%D8%AF%20%D9%85%D8%B5%D8%A7%D8%AF%D9%82%D8%A9%20%D9%85%D8%AC%D9%84%D8%B3%20%D9%86%D9%88%D8%A7%D8%A8%20%D8%A7%D9%84%D8%B4%D8%B9%D8%A8,%D8%B1%D8%A6%D9%8A%D8%B3%20%D8%A7%D9%84%D8%AC%D9%85%D9%87%D9%88%D8%B1%D9%8A%D8%A9%20%D8%A7%D9%84%D9%82%D8%A7%D9%86%D9%88%D9%86%20%D8%A7%D9%84%D8%A2%D8%AA%D9%8A%20%D9%86%D8%B5%D9%87%20%3A&text=%D8%AA%D8%B9%D8%AA%D8%A8%D8%B1%20%D8%AC%D9%86%D8%AD%D8%A7%20%D8%A7%D9%84%D8%AC%D8%B1%D8%A7%D8%A6%D9%85%20%D8%A7%D9%84%D9%85%D8%B4%D8%A7%D8%B1%20%D8%A5%D9%84%D9%8A%D9%87%D8%A7%20%D8%A8%D8%A7%D9%84%D9%81%D8%B5%D9%84%2010%20%D8%AB%D8%A7%D9%84%D8%AB%D8%A7%20%D9%85%D9%86%20%D9%87%D8%B0%D8%A7%20%D8%A7%D9%84%D9%82%D8%A7%D9%86%D9%88%D9%86.
+    - https://drive.google.com/file/d/1VQQ1riSfmnTQyj4c9PgG9l1kl7dnDY77/view
+    - https://drive.google.com/file/d/1TV_0scJI8mWEQIND8GPv7mwHeuzTkV9e/view
+    - https://drive.google.com/file/d/1-aANlSocPEuKLulslRw-_Jyu8JTEXUDb/view
+    - https://www.bdo.tn/getattachment/Publications/Presentation-de-la-loi-transversale/BDO-Presentation-de-la-loi-transversale-02-08-2019.pdf.aspx?lang=fr-FR&ext=.pdf&disposition=attachment
+    - http://www.arp.tn/site/servlet/Fichier?code_obj=93274&code_exp=1&langue=1#:~:text=%D9%82%D8%A7%D9%86%D9%88%D9%86%20%D8%B9%D8%AF%D8%AF%2030%20%D9%84%D8%B3%D9%86%D8%A9%202016,%D8%A7%D9%84%D8%B5%D8%AD%D8%A9%20%D8%A8%D8%A7%D9%84%D9%85%D9%86%D8%A7%D8%B7%D9%82%20%D8%A7%D9%84%D8%B1%D8%A7%D8%AC%D8%B9%D8%A9%20%D9%84%D9%84%D8%AC%D9%85%D8%A7%D8%B9%D8%A7%D8%AA%20%D8%A7%D9%84%D9%85%D8%AD%D9%84%D9%8A%D8%A9.&text=%D9%88%D8%A8%D8%B9%D8%AF%20%D9%85%D8%B5%D8%A7%D8%AF%D9%82%D8%A9%20%D9%85%D8%AC%D9%84%D8%B3%20%D9%86%D9%88%D8%A7%D8%A8%20%D8%A7%D9%84%D8%B4%D8%B9%D8%A8,%D8%B1%D8%A6%D9%8A%D8%B3%20%D8%A7%D9%84%D8%AC%D9%85%D9%87%D9%88%D8%B1%D9%8A%D8%A9%20%D8%A7%D9%84%D9%82%D8%A7%D9%86%D9%88%D9%86%20%D8%A7%D9%84%D8%A2%D8%AA%D9%8A%20%D9%86%D8%B5%D9%87%20%3A&text=%D8%AA%D8%B9%D8%AA%D8%A8%D8%B1%20%D8%AC%D9%86%D8%AD%D8%A7%20%D8%A7%D9%84%D8%AC%D8%B1%D8%A7%D8%A6%D9%85%20%D8%A7%D9%84%D9%85%D8%B4%D8%A7%D8%B1%20%D8%A5%D9%84%D9%8A%D9%87%D8%A7%20%D8%A8%D8%A7%D9%84%D9%81%D8%B5%D9%84%2010%20%D8%AB%D8%A7%D9%84%D8%AB%D8%A7%20%D9%85%D9%86%20%D9%87%D8%B0%D8%A7%20%D8%A7%D9%84%D9%82%D8%A7%D9%86%D9%88%D9%86.
+  ticketImage: {fileID: 21300000, guid: 12ff99a35c940b84384835fbf4b73742, type: 3}

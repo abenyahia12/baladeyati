@@ -12,11 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7694f70376a2e964cb13d0a08f1d69b7, type: 3}
   m_Name: Ticket16
   m_EditorClassIdentifier: 
-  ticketTitle: "\u0627\u0644\u062A\u0633\u0648\u064A\u0642 \u0627\u0644\u062A\u0631\u0627\u0628\u064A"
+  ticketTitle: "-16 \u0627\u0644\u062A\u0633\u0648\u064A\u0642 \u0627\u0644\u062A\u0631\u0627\u0628\u064A"
   ticketElement:
     type: 0
     photo: {fileID: 0}
     text: 
-    pdfTitle: fiche_type
-    videoName: 
-  ticketImage: {fileID: 0}
+    pdfTitle: "16- \u0627\u0644\u062A\u0633\u0648\u064A\u0642 \u0627\u0644\u062A\u0631\u0627\u0628\u064A"
+    videoIndex: 0
+    ReferenceURLS:
+    - 'https://anc.majles.marsad.tn/uploads/documents/TnConstit_final_1.pdf '
+    - 'https://legislation-securite.tn/sites/default/files/law/%D9%82%D8%A7%D9%86%D9%88%D9%86%20%D8%A3%D8%B3%D8%A7%D8%B3%D9%8A%20%D8%B9%D8%AF%D8%AF%2029%20%D9%84%D8%B3%D9%86%D8%A9%202018%20%D9%85%D8%A4%D8%B1%D8%AE%20%D9%81%D9%8A%209%20%D9%85%D8%A7%D9%8A%202018%20%D9%8A%D8%AA%D8%B9%D9%84%D9%82%20%D8%A8%D9%85%D8%AC%D9%84%D8%A9%20%D8%A7%D9%84%D8%AC%D9%85%D8%A7%D8%B9%D8%A7%D8%AA%20%D8%A7%D9%84%D9%85%D8%AD%D9%84%D9%8A%D8%A9.pdf '
+  ticketImage: {fileID: 21300000, guid: a3b92de7c02f1034bb3c34e39e307001, type: 3}

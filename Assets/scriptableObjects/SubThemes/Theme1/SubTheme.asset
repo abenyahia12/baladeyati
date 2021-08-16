@@ -21,6 +21,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 00fb58514db8d9941833157d5e9e191d, type: 2}
   - {fileID: 11400000, guid: 950b1f210222b544a8f76e566721db01, type: 2}
   - {fileID: 11400000, guid: 1622d00fea422244ebe2fec6302a42d7, type: 2}
-  subThemeTitle: "\u0627\u0644\u0647\u064A\u0627\u0643\u0644 \u0627\u0644\u0628\u0644\u062F\u064A\u0629
-    Les organes municipaux"
-  subthemeImage: {fileID: 21300000, guid: e6f7e0c0698251c4cbaa83a0732b03b6, type: 3}
+  subThemeTitle: "\u0627\u0644\u0647\u064A\u0627\u0643\u0644 \u0627\u0644\u0628\u0644\u062F\u064A\u0629"
+  subthemeImage: {fileID: 21300000, guid: 722678fec895c7646a250086460382be, type: 3}

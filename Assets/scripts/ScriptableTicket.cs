@@ -15,7 +15,8 @@ public struct ticketElement
     public Sprite photo;
     public string text;
     public string pdfTitle;
-    public string videoName;
+    public int videoIndex;
+    public string[] ReferenceURLS;
 }
 [CreateAssetMenu(menuName = "My Assets/ScriptableTicket")]
 [Serializable]

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7694f70376a2e964cb13d0a08f1d69b7, type: 3}
+  m_Name: Ticket50
+  m_EditorClassIdentifier: 
+  ticketTitle: "-52 \u062A\u0623\u0645\u064A\u0646 \u0645\u062A\u0637\u0644\u0628\u0627\u062A
+    \u0627\u0644\u0633\u0644\u0627\u0645\u0629 \u0648\u0627\u0644\u0648\u0642\u0627\u064A\u0629
+    \u062F\u0627\u062E\u0644 \u0627\u0644\u0645\u0633\u062A\u0648\u062F\u0639"
+  ticketElement:
+    type: 0
+    photo: {fileID: 0}
+    text: 
+    pdfTitle: "52- \u062A\u0623\u0645\u064A\u0646 \u0645\u062A\u0637\u0644\u0628\u0627\u062A
+      \u0627\u0644\u0633\u0644\u0627\u0645\u0629 \u0648\u0627\u0644\u0648\u0642\u0627\u064A\u0629
+      \u062F\u0627\u062E\u0644 \u0627\u0644\u0645\u0633\u062A\u0648\u062F\u0639"
+    videoIndex: 0
+    ReferenceURLS:
+    - http://www.arp.tn/site/servlet/Fichier?code_obj=72746&code_exp=1&langue=1
+    - 
+    - 
+  ticketImage: {fileID: 21300000, guid: e91f24b8277e65844895efc532e3909b, type: 3}

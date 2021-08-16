@@ -14,5 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scriptableTickets:
   - {fileID: 11400000, guid: fdb0d4dae2f350b449ae4707e810633c, type: 2}
-  subThemeTitle: "\u0627\u0644\u0645\u0633\u0627\u062D\u0627\u062A \u0627\u0644\u062E\u0636\u0631\u0627\u0621"
-  subthemeImage: {fileID: 21300000, guid: 09fa12443b63108448dc8dc4002f8a6a, type: 3}
+  - {fileID: 11400000, guid: 5a88b893cc7356947ad17e770da43d98, type: 2}
+  - {fileID: 11400000, guid: 58a6db62f15c140448433011bbe25c34, type: 2}
+  - {fileID: 11400000, guid: ae1c90be95f388740a5042d7a431e398, type: 2}
+  - {fileID: 11400000, guid: 56cdcd54302605b44a1f526b7685b7ff, type: 2}
+  subThemeTitle: "\u0627\u0644\u0637\u0644\u0628 \u0627\u0644\u0639\u0645\u0648\u0645\u064A"
+  subthemeImage: {fileID: 21300000, guid: 5c798eb33ddd66b499c6bd5493ec0f44, type: 3}

@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: SubTheme 9
   m_EditorClassIdentifier: 
   scriptableTickets:
-  - {fileID: 11400000, guid: 55ed7aa93116f5c469abd1c7ee799d4d, type: 2}
-  - {fileID: 11400000, guid: edc33da3cb0af1941a8006a89b05aa89, type: 2}
-  subThemeTitle: "\u062C\u0648\u062F\u0629 \u0627\u0644\u062D\u064A\u0627\u0629"
-  subthemeImage: {fileID: 21300000, guid: 09fa12443b63108448dc8dc4002f8a6a, type: 3}
+  - {fileID: 11400000, guid: 5eb551098ef18ce4e99689f5b3602c5d, type: 2}
+  - {fileID: 11400000, guid: 4ad61e0da0de4f144ae857e3032390ec, type: 2}
+  - {fileID: 11400000, guid: ddd881bb7599e2b43ae3865cebb854ba, type: 2}
+  - {fileID: 11400000, guid: c9dd43bf23720394998411b488309aaa, type: 2}
+  - {fileID: 11400000, guid: 35105e543166e924bb824f34899156f4, type: 2}
+  subThemeTitle: " \u0627\u0644\u062A\u0648\u062C\u0647\u0627\u062A \u0627\u0644\u062C\u062F\u064A\u062F\u0629"
+  subthemeImage: {fileID: 21300000, guid: 258ab1f5811a78449a07b91b83389318, type: 3}

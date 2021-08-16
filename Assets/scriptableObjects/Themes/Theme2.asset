@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c36111579aaa0b49961f262cd78bdab, type: 3}
   m_Name: Theme2
   m_EditorClassIdentifier: 
+  themeColor: {r: 0, g: 0.39215687, b: 0.6901961, a: 1}
   scriptableSubThemes:
   - {fileID: 11400000, guid: b8bafc4c77e288848a74ea12d9e825b6, type: 2}
   - {fileID: 11400000, guid: ad44c23320512f941b9ce542deec54f5, type: 2}
   - {fileID: 11400000, guid: c2add22440c117049b2771cbdc43ff46, type: 2}
   - {fileID: 11400000, guid: 46c2a06b85fe4ee47b821550b5a19835, type: 2}
-  themeTitle: "\u0627\u0644\u0645\u0627\u0644\u064A\u0629 \u0627\u0644\u0645\u062D\u0644\u064A\u0629
-    Finances locales"
+  themeTitle: "\u0627\u0644\u0634\u0624\u0648\u0646 \u0627\u0644\u0625\u062F\u0627\u0631\u064A\u0629"
   videoName: astrid.mp4
-  themeImage: {fileID: 21300000, guid: dcb43c06bbe472b4ca67c4ec94ff69fd, type: 3}
+  themeImage: {fileID: 21300000, guid: 3a405140a0255ad418b17cf27985a293, type: 3}

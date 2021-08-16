@@ -10,9 +10,9 @@ public class VideoManager : MonoBehaviour
     [SerializeField] Sprite m_PauseSprite;
 
     [SerializeField] Image m_PlayPauseBG;
-    [SerializeField] VideoPlayer m_VideoPlayer;
+    public VideoPlayer m_VideoPlayer;
 
-    [SerializeField] List<VideoClip> m_VideoClips;
+    public List<VideoClip> m_VideoClips;
     private int m_VideoClipIndex = 0;
 
     [SerializeField] Text m_CurrentTime;
@@ -63,15 +63,13 @@ public class VideoManager : MonoBehaviour
         // additional fool proofing
         if(m_VideoClips.Count == 0)
         {
-            Debug.LogError("Please add videos - One ore more videoClips are missing, be sure to add videos and add them to videomanager.cs in the inspector window of gameobeject VideoManager, also please refer to README");
-            return;
+           return;
         }
 
         for (int i = 0; i < m_VideoClips.Count; i++)
         {
             if (m_VideoClips[i] == null)
             {
-                Debug.LogError("One ore more videoClips are missing, be sure to add videos and add them to videomanager.cs in the inspector window of VideoManager, also please refer to README");
                 return;
             }
         }
@@ -227,6 +225,7 @@ public class VideoManager : MonoBehaviour
 
         if (m_VideoClipIndex >= m_VideoClips.Count)
         {
+            if(m_VideoClips.Count!=0)
             m_VideoClipIndex = m_VideoClipIndex % m_VideoClips.Count;
         }
     }
@@ -335,19 +334,23 @@ public class VideoManager : MonoBehaviour
 
     private void SetTotalTimeUI()
     {
+        if(m_VideoPlayer.clip!=null)
+        { 
         string minutes = Mathf.Floor((int)m_VideoPlayer.clip.length / 60).ToString("00");
         string seconds = ((int)m_VideoPlayer.clip.length % 60).ToString("00");
 
         m_TotalTime.text = minutes + " : " + seconds;
+        }
     }
 
     private void MovePlayHead()
     {
         m_CurrentTimeSlider.value = (float)m_VideoPlayer.time;
+        if (m_VideoPlayer.clip != null)
+        {
         m_CurrentTimeSlider.maxValue = (float)m_VideoPlayer.clip.length;
-
         m_InteractiveSlider.maxValue = Mathf.Floor((int)m_VideoPlayer.clip.length);
-      
+        }
     }
    
     public void ScrubBarHeadMove()

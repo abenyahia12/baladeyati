@@ -17,6 +17,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 397935e4bfdda0047bf8daa8c0114251, type: 2}
   - {fileID: 11400000, guid: 2e28331fea46f0a4c892c70a94d4f0d1, type: 2}
   - {fileID: 11400000, guid: 5c6880e9306ba474d9961f7fbc9c1fb6, type: 2}
-  subThemeTitle: "\u0627\u0644\u0646\u0638\u0627\u0641\u0629 \u0648 \u0631\u0641\u0639
-    \u0627\u0644\u0646\u0641\u0627\u064A\u0627\u062A"
-  subthemeImage: {fileID: 21300000, guid: 09fa12443b63108448dc8dc4002f8a6a, type: 3}
+  - {fileID: 11400000, guid: 3eb6bc7730fdd7b4b85559ede37deb90, type: 2}
+  - {fileID: 11400000, guid: 5cb161666398aca4c872a9ba8d63d246, type: 2}
+  - {fileID: 11400000, guid: f49dd3b91932d1249bbf9ad2e7ac4282, type: 2}
+  - {fileID: 11400000, guid: 034d88e72a4ead44aa7a920dc0726957, type: 2}
+  - {fileID: 11400000, guid: fbd3e8f562ea4104aa2e16d9f387dfb1, type: 2}
+  subThemeTitle: "\u0627\u0644\u0645\u064A\u0632\u0627\u0646\u064A\u0629 \u0648\u0627\u0644\u0645\u062D\u0627\u0633\u0628\u0629"
+  subthemeImage: {fileID: 21300000, guid: eaf106172867e654f90122a30d324342, type: 3}

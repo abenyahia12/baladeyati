@@ -16,15 +16,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4856e1647eb68494ea86c7310f15c065, type: 2}
   - {fileID: 11400000, guid: ae389b78135ec4b4b8fe04809907813f, type: 2}
   - {fileID: 11400000, guid: 6dc74e5a3c6ac614d9c6e3b7446ce40d, type: 2}
-  - {fileID: 11400000, guid: 280aff26dea76974abee8ab3c0b2e333, type: 2}
-  - {fileID: 11400000, guid: 407f4acc3961de44ca0b5829adb47e3a, type: 2}
-  - {fileID: 11400000, guid: 54f63aee24d2626489e1855f86a30c65, type: 2}
-  - {fileID: 11400000, guid: e50500a1a75cdc1408711dd60f18e946, type: 2}
-  - {fileID: 11400000, guid: a64685a597729444d944b6c58d553614, type: 2}
-  - {fileID: 11400000, guid: 8f6d234756c948c4480817ef7cb4394c, type: 2}
-  - {fileID: 11400000, guid: d9fcba3108dfd6e49b9d04d0802505e2, type: 2}
-  - {fileID: 11400000, guid: 6e8e0c15a16cc78408ab2528218b7db4, type: 2}
-  - {fileID: 11400000, guid: 91f12bb928519dd44bbc454172de241b, type: 2}
-  subThemeTitle: "\u0627\u0644\u062A\u0646\u0645\u064A\u0629 \u0627\u0644\u0645\u062D\u0644\u064A\u0629
-    \u0648\u0627\u0644\u0627\u0633\u062A\u062B\u0645\u0627\u0631"
-  subthemeImage: {fileID: 21300000, guid: 09fa12443b63108448dc8dc4002f8a6a, type: 3}
+  subThemeTitle: "\u0627\u0644\u0635\u062D\u0629"
+  subthemeImage: {fileID: 21300000, guid: afdda2944496bc9449fdef350b104b0b, type: 3}

@@ -22,6 +22,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 30d4ffa9529b0ea4cb5897ba93672aa1, type: 2}
   - {fileID: 11400000, guid: 4ab0d03a5cfd884439008b647ef2c8a9, type: 2}
   - {fileID: 11400000, guid: e6f084a4bcdb0154588292e64d98c5b6, type: 2}
-  subThemeTitle: "\u0627\u0644\u0645\u064A\u0632\u0627\u0646\u064A\u0629 \u0648\u0627\u0644\u0645\u062D\u0627\u0633\u0628\u0629
-    Budget et comptabilit\xE9 "
-  subthemeImage: {fileID: 21300000, guid: 09fa12443b63108448dc8dc4002f8a6a, type: 3}
+  - {fileID: 11400000, guid: 037d021971501c64a8c19e0b9bb97085, type: 2}
+  - {fileID: 11400000, guid: 9df24223d4694c9459e578dc0dece7fb, type: 2}
+  - {fileID: 11400000, guid: ba205eec41247da4c840d1d0c3f494d4, type: 2}
+  - {fileID: 11400000, guid: 2a02aa0b3f104d448b3f43c7c9cddf3a, type: 2}
+  - {fileID: 11400000, guid: 9380ec4b0e618d746a7755cc93b0dcdd, type: 2}
+  subThemeTitle: " \u0627\u0644\u062A\u0635\u0631\u0641 \u0641\u064A \u0627\u0644\u0645\u0648\u0627\u0631\u062F
+    \u0627\u0644\u0628\u0634\u0631\u064A\u0629"
+  subthemeImage: {fileID: 21300000, guid: ccc67c7935d885b459d1b0c153127bcd, type: 3}

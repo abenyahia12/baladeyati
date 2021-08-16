@@ -12,12 +12,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7694f70376a2e964cb13d0a08f1d69b7, type: 3}
   m_Name: Ticket2
   m_EditorClassIdentifier: 
-  ticketTitle: "\u0627\u0644\u0645\u062C\u0644\u0633 \u0627\u0644\u0628\u0644\u062F\u064A\u060C
+  ticketTitle: "-2 \u0627\u0644\u0645\u062C\u0644\u0633 \u0627\u0644\u0628\u0644\u062F\u064A\u060C
     \u062A\u0631\u0643\u064A\u0628\u062A\u0647 \u0648\u0635\u0644\u0627\u062D\u064A\u0627\u062A\u0647"
   ticketElement:
     type: 0
     photo: {fileID: 0}
     text: 
-    pdfTitle: fiche_type
-    videoName: 
-  ticketImage: {fileID: 0}
+    pdfTitle: "2-\u0627\u0644\u0645\u062C\u0644\u0633 \u0627\u0644\u0628\u0644\u062F\u064A\u060C
+      \u062A\u0631\u0643\u064A\u0628\u062A\u0647 \u0648\u0635\u0644\u0627\u062D\u064A\u0627\u062A\u0647"
+    videoIndex: 1
+    ReferenceURLS:
+    - ' https://anc.majles.marsad.tn/uploads/documents/TnConstit_final_1.pdf'
+    - 'https://legislation-securite.tn/sites/default/files/law/%D9%82%D8%A7%D9%86%D9%88%D9%86%20%D8%A3%D8%B3%D8%A7%D8%B3%D9%8A%20%D8%B9%D8%AF%D8%AF%2029%20%D9%84%D8%B3%D9%86%D8%A9%202018%20%D9%85%D8%A4%D8%B1%D8%AE%20%D9%81%D9%8A%209%20%D9%85%D8%A7%D9%8A%202018%20%D9%8A%D8%AA%D8%B9%D9%84%D9%82%20%D8%A8%D9%85%D8%AC%D9%84%D8%A9%20%D8%A7%D9%84%D8%AC%D9%85%D8%A7%D8%B9%D8%A7%D8%AA%20%D8%A7%D9%84%D9%85%D8%AD%D9%84%D9%8A%D8%A9.pdf '
+    - 'https://legislation-securite.tn/ar/node/55246 '
+    - 'https://legislation-securite.tn/ar/node/55246 '
+    - https://legislation-securite.tn/ar/node/55248
+    - https://legislation-securite.tn/ar/node/55249
+    - ' https://legislation-securite.tn/ar/node/55250'
+    - https://legislation-securite.tn/ar/node/55251
+    - https://legislation-securite.tn/ar/node/55252
+    - 'https://legislation-securite.tn/ar/node/55253 '
+    - https://legislation-securite.tn/ar/node/45656
+    - https://cyrilla.org/ar/document/s976dx7ia6maau3oq207wrk9?page=1
+    - https://legislation-securite.tn/ar/node/104434
+    - https://drive.google.com/file/d/10hY65fs_ExBCaGGjcDoyvaX6nTYD5Im3/view
+    - https://drive.google.com/file/d/1Upf8nfkeN9ngdGhKVezr9v6yZt1NN37k/view
+  ticketImage: {fileID: 21300000, guid: 81b31d9d6d0060d4a95718e982ec3a45, type: 3}

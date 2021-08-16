@@ -16,7 +16,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 70e4826a1d4fbc74a847b99cd8791123, type: 2}
   - {fileID: 11400000, guid: e670eed35f227ed4bacaeb43d7b796b7, type: 2}
   - {fileID: 11400000, guid: 5f65f0010f5cc184bb5fd340f1ccb127, type: 2}
-  - {fileID: 11400000, guid: 4699225606751d447943028bc997c8a2, type: 2}
-  subThemeTitle: "\u062A\u0646\u0645\u064A\u0629 \u0627\u0644\u0645\u0648\u0627\u0631\u062F
-    \u0627\u0644\u0628\u0644\u062F\u064A\u0629 Mobilisation des ressources municipales"
-  subthemeImage: {fileID: 21300000, guid: 09fa12443b63108448dc8dc4002f8a6a, type: 3}
+  subThemeTitle: "\u0627\u0644\u062A\u0635\u0631\u0641 \u0641\u064A \u0627\u0644\u0645\u0631\u0627\u0641\u0642
+    \u0627\u0644\u0639\u0627\u0645\u0629 \u0627\u0644\u0645\u062D\u0644\u064A\u0629"
+  subthemeImage: {fileID: 21300000, guid: 22bf342c25fb6b248a3393fb54dd3419, type: 3}

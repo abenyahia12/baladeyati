@@ -12,16 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c36111579aaa0b49961f262cd78bdab, type: 3}
   m_Name: Theme4
   m_EditorClassIdentifier: 
+  themeColor: {r: 0.003921569, g: 0.70980394, b: 0.9490196, a: 1}
   scriptableSubThemes:
   - {fileID: 11400000, guid: f8b638a27a73787458e43d1babb16980, type: 2}
   - {fileID: 11400000, guid: 71cb8ea085643aa48a5fe9a04e5f57d2, type: 2}
   - {fileID: 11400000, guid: d7ffee81a86346c49988ca71c9724e1b, type: 2}
   - {fileID: 11400000, guid: f9a5426d98b83064589a9d62a9321a77, type: 2}
-  - {fileID: 11400000, guid: f3b663b73b3d44d4b98390434b746d40, type: 2}
-  - {fileID: 11400000, guid: 88a0ca88e68535a41994aaf64d41d630, type: 2}
-  - {fileID: 11400000, guid: f4bfc3431d0468a489e9d865c0476003, type: 2}
-  - {fileID: 11400000, guid: 7ce825303dd6f4c4ebefb2779280fc03, type: 2}
-  - {fileID: 11400000, guid: b343bc900c963bb458b3c8c8a48520c8, type: 2}
-  themeTitle: Services techniques
+  themeTitle: "\u0627\u0644\u0634\u0624\u0648\u0646 \u0627\u0644\u0645\u0627\u0644\u064A\u0629"
   videoName: astrid.mp4
-  themeImage: {fileID: 21300000, guid: 71acdac164d9c37429b5c12ab711da75, type: 3}
+  themeImage: {fileID: 21300000, guid: 17741d5b94ecbbc42ac2925d59d50666, type: 3}

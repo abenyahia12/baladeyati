@@ -5,11 +5,19 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using ArabicSupport;
+using System;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
+using System.Linq;
+using UnityEngine.Networking;
 public class ContentManager : MonoBehaviour
 {
     public CanvasGroup[] canvasGroups;
     public Transform ThemeParent;
     public Transform SubMawadhiParent;
+    public Animation MawadhiAnimator;
+    public Animation SubMawadhiAnimator;
+    public Animation TicketsAnimator;
     public Transform TicketsParent;
     public Transform MainTicketParent;
     public GameObject themePrefab;
@@ -21,7 +29,8 @@ public class ContentManager : MonoBehaviour
     public TextMeshProUGUI[] MenuMawdhiTexts;
     public Button[] MenuMawdhiButtons;
     public PDFViewer PDFViewer;
-    public AzizVideoManager videoManager;
+    public VideoManager ticketVideoManager;
+    public Button videoButton;
     public Dictionary<string,GameObject> SearchObjs=new Dictionary<string, GameObject>();
     public TMP_InputField searchText;
     public GameObject loop;
@@ -29,12 +38,71 @@ public class ContentManager : MonoBehaviour
     public string subthemename;
     public string fileName =  "save.dat";
     public List<ScriptableTicket> tickets;
+    public List<string> RefernceOptions=null;
+    public PDFAsset pDFAsset;
+    public TMP_Dropdown ReferencesDropDown;
+    public CanvasState previousCanvasState;
+    public CanvasState canvasState;
+    public ScriptableTicket currentScriptableTicket;
+    public ScriptableTheme currentScriptableTheme;
+    public ScriptableSubTheme currentScriptableSubTheme;
+    public ScrollRect m_SubThemeScrollRect;
+    public ScrollRect m_TicketsScrollRect;
+    public ScrollRect m_ThemesScrollRect;
     private void Start()
     {
         GenerateThemes();
         SetupSideMenu();
         //SaveList();
         LoadeList();
+    }
+
+    void Update()
+    {
+
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+            switch (canvasState)
+            {
+
+                case CanvasState.Themes:
+                    if (previousCanvasState == CanvasState.PDF)
+                    {
+                        ShowTicketPDF(currentScriptableTicket.ticketElement, currentScriptableTicket.ticketElement.videoIndex, currentScriptableTicket);
+                    }
+                    else
+                    {
+                        SwitchCanvastoThemes();
+                        GenerateThemes();
+                    }
+
+                    break;
+                case CanvasState.SubThemes:
+                    SwitchCanvastoThemes();
+                    GenerateThemes();
+
+                    break;
+                case CanvasState.Tickets:
+                    GenerateSubThemes(currentScriptableTheme.scriptableSubThemes, currentScriptableTheme.videoName, currentScriptableTheme.themeTitle, currentScriptableTheme);
+
+                    break;
+                case CanvasState.PDF:
+                    GenerateTickets(currentScriptableSubTheme.scriptableTickets, currentScriptableSubTheme);
+                    break;
+                default:
+                    break;
+            }
+    
+
+            }
+
+    }
+    public enum CanvasState
+    {
+        Themes,
+        SubThemes,
+        Tickets,
+        PDF
     }
     void SaveList()
     {
@@ -46,6 +114,11 @@ public class ContentManager : MonoBehaviour
         DataHandler.SaveList(temp, fileName);
 
     }
+    public void OPENURL(string url)
+    {
+        Application.OpenURL(url);
+    }
+
     void LoadeList()
     {
         List<string> temp = new List<string>();
@@ -61,6 +134,7 @@ public class ContentManager : MonoBehaviour
         for (int i = 0; i < scriptableThemes.Length; i++)
         {
             MenuMawdhiTexts[i].text = scriptableThemes[i].themeTitle;
+            MenuMawdhiTexts[i].color= scriptableThemes[i].themeColor;
         }
     }
     public void ActivateSearch(bool x)
@@ -123,7 +197,9 @@ public class ContentManager : MonoBehaviour
             CreateTheme(scriptableThemes[i]);
         }
         ActivateSearch(true);
-
+        AnimateAnimator(MawadhiAnimator);
+        previousCanvasState = canvasState;
+        canvasState = CanvasState.Themes;
     }
     void CreateTheme(ScriptableTheme scriptableTheme)
     {
@@ -132,13 +208,16 @@ public class ContentManager : MonoBehaviour
         themeView.themeImage.sprite = scriptableTheme.themeImage;
         themeView.ScriptableTheme = scriptableTheme;
         themeView.themeTitle.text = scriptableTheme.themeTitle;
+        themeView.themeTitle.color= scriptableTheme.themeColor;
         SearchObjs.Add(scriptableTheme.themeTitle, go);
         FixArabic(themeView.themeTitle);
-        themeView.themeButton.onClick.AddListener(() => GenerateSubThemes(scriptableTheme.scriptableSubThemes, scriptableTheme.videoName, scriptableTheme.themeTitle));
+        themeView.themeButton.onClick.AddListener(() => GenerateSubThemes(scriptableTheme.scriptableSubThemes, scriptableTheme.videoName, scriptableTheme.themeTitle, scriptableTheme));
     }
-    void GenerateSubThemes(ScriptableSubTheme[] scriptableSubThemes,string videoName,string title)
+    void GenerateSubThemes(ScriptableSubTheme[] scriptableSubThemes,string videoName,string title, ScriptableTheme scriptableTheme)
     {
+        currentScriptableTheme = scriptableTheme;
         SubThemesThemeTitle.text = title;
+        SubThemesThemeTitle.color = scriptableTheme.themeColor;
         FixArabic(SubThemesThemeTitle);
         CleanSearchObjs();
         CleanParent(SubMawadhiParent);
@@ -146,25 +225,35 @@ public class ContentManager : MonoBehaviour
         {
             CreateSubTheme(scriptableSubThemes[i], i);
         }
-        videoManager.SetupLink(videoName);
         ActivateSearch(true);
         SwitchCanvastoSubThemes();
+        AnimateAnimator(SubMawadhiAnimator);
     }
+
+    public void AnimateAnimator(Animation animation)
+    {
+        animation.Play();
+    }
+
     public void GenerateSubThemes(int index)
     {
+        SubThemesThemeTitle.text = scriptableThemes[index].themeTitle;
+        SubThemesThemeTitle.color = scriptableThemes[index].themeColor;
+        FixArabic(SubThemesThemeTitle);
+        CleanSearchObjs();
         CleanParent(SubMawadhiParent);
         CleanSearchObjs();
         for (int i = 0; i < scriptableThemes[index].scriptableSubThemes.Length; i++)
         {
             CreateSubTheme(scriptableThemes[index].scriptableSubThemes[i], i);
         }
-        videoManager.SetupLink(scriptableThemes[index].videoName);
         ActivateSearch(true);
         CleanSearchObjs();
         SwitchCanvastoSubThemes();
     }
     void CreateSubTheme(ScriptableSubTheme scriptableSubTheme,int index)
     {
+
         GameObject go = Instantiate(subThemePrefab, SubMawadhiParent);
         SubThemeView subthemeView = go.GetComponent<SubThemeView>();
         subthemeView.SubThemeImage.sprite = scriptableSubTheme.subthemeImage;
@@ -173,10 +262,11 @@ public class ContentManager : MonoBehaviour
         SearchObjs.Add(scriptableSubTheme.subThemeTitle, go);
         FixArabic(subthemeView.subthemeTitle);
         subthemeView.subthemeNumberTitle.text =(index + 1).ToString(); ;
-        subthemeView.SubThemeButton.onClick.AddListener(() => GenerateTickets(scriptableSubTheme.scriptableTickets));
+        subthemeView.SubThemeButton.onClick.AddListener(() => GenerateTickets(scriptableSubTheme.scriptableTickets, scriptableSubTheme));
     }
-    void GenerateTickets(ScriptableTicket[] scriptableTickets)
+    void GenerateTickets(ScriptableTicket[] scriptableTickets,ScriptableSubTheme scriptableSubTheme)
     {
+        currentScriptableSubTheme = scriptableSubTheme;
         CleanSearchObjs();
         CleanParent(TicketsParent);
         for (int i = 0; i < scriptableTickets.Length; i++)
@@ -185,6 +275,7 @@ public class ContentManager : MonoBehaviour
         }
         ActivateSearch(true);
         SwitchCanvastoTickets();
+        AnimateAnimator(TicketsAnimator);
     }
     public void GenerateFavoriteTickets(Toggle x)
     {
@@ -223,7 +314,8 @@ public class ContentManager : MonoBehaviour
         ticketView.TicketTitle.text = scriptableTicket.ticketTitle;
         SearchObjs.Add(scriptableTicket.ticketTitle, go);
         FixArabic(ticketView.TicketTitle);
-        ticketView.TicketButton.onClick.AddListener(() => ShowTicketPDF(scriptableTicket.ticketElement, scriptableTicket.ticketElement.videoName));
+
+        ticketView.TicketButton.onClick.AddListener(() => ShowTicketPDF(scriptableTicket.ticketElement, scriptableTicket.ticketElement.videoIndex, scriptableTicket));
         bool x = checkIfLiked(ticketView.scriptableTicket.ticketTitle);
         ticketView.animator.SetBool("Pressed",x);
         ticketView.likeButton.onClick.AddListener(() => likeTicket(ticketView));
@@ -250,14 +342,56 @@ public class ContentManager : MonoBehaviour
         }
         DataHandler.SaveList(temp, fileName);
     }
-    void ShowTicketPDF(ticketElement ticketElement,string videoName)
+    void ShowTicketPDF(ticketElement ticketElement,int videoIndex,ScriptableTicket scriptableTicket )
     {
+
+        currentScriptableTicket = scriptableTicket;
         CreateElement(ticketElement);
-        videoManager.SetupLink(videoName);
+
+        if (videoIndex!=0)
+        {
+            videoButton.gameObject.SetActive(true);
+            ticketVideoManager.m_VideoPlayer.clip = ticketVideoManager.m_VideoClips[videoIndex];
+        }
+        else
+        {
+            videoButton.gameObject.SetActive(false);
+        }
+        if (ticketElement.ReferenceURLS.Length == 0)
+        {
+            ReferencesDropDown.gameObject.SetActive(false);
+        }
+        else
+        {
+            ReferencesDropDown.gameObject.SetActive(true);
+            GenerateLinks(ticketElement.ReferenceURLS);
+        }
+
         ActivateSearch(false);
         CleanSearchObjs();
         SwitchCanvastoTicketElement();
     }
+
+    private void GenerateLinks(string[] referenceURLS)
+    {
+        ReferencesDropDown.ClearOptions();
+        RefernceOptions.Clear();
+        RefernceOptions = referenceURLS.ToList();
+        List<string> temp = new List<string>();
+        int i = 0;
+        foreach (string item in RefernceOptions)
+        {
+            temp.Add(i.ToString());
+            i++;
+        }
+        ReferencesDropDown.AddOptions(temp);
+    }
+    public void OnDropDownChanged(TMP_Dropdown dropDown)
+    {
+        if(!string.IsNullOrEmpty(RefernceOptions[dropDown.value]))
+        Application.OpenURL(RefernceOptions[dropDown.value]);
+    }
+
     void CreateElement(ticketElement ticketElement)
     {
         PDFViewer.FileName = ticketElement.pdfTitle+".pdf";
@@ -282,21 +416,30 @@ public class ContentManager : MonoBehaviour
     }
     public void SwitchCanvastoSubThemes()
     {
+        m_SubThemeScrollRect.verticalNormalizedPosition = 1f;
+        previousCanvasState = canvasState;
+        canvasState = CanvasState.SubThemes;
         ActivateCanvasGroup(1);
         ActivatePDFVIEWER(false);
     }
     public void SwitchCanvastoTickets()
     {
+        m_TicketsScrollRect.verticalNormalizedPosition = 1f;
+        previousCanvasState = canvasState;
+        canvasState = CanvasState.Tickets;
         ActivateCanvasGroup(2);
         ActivatePDFVIEWER(false);
     }
     public void SwitchCanvastoTicketElement()
     {
+        previousCanvasState = canvasState;
+        canvasState = CanvasState.PDF;
         ActivateCanvasGroup(3);
         ActivatePDFVIEWER(true);
     }
     public void SwitchCanvastoThemes()
     {
+        m_ThemesScrollRect.verticalNormalizedPosition = 1f;
         ActivateSearch(true);
         ActivateCanvasGroup(0);
         ActivatePDFVIEWER(false);

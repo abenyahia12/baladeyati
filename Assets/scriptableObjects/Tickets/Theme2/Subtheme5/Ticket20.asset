@@ -12,11 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7694f70376a2e964cb13d0a08f1d69b7, type: 3}
   m_Name: Ticket20
   m_EditorClassIdentifier: 
-  ticketTitle: "\u0627\u0644\u062A\u062D\u0644\u064A\u0644 \u0627\u0644\u0645\u0627\u0644\u064A"
+  ticketTitle: "-20 \u0627\u0646\u062A\u062F\u0627\u0628 \u0627\u0644\u0639\u064E\u0645\u0644\u0629"
   ticketElement:
     type: 0
     photo: {fileID: 0}
     text: 
-    pdfTitle: fiche_type
-    videoName: 
-  ticketImage: {fileID: 0}
+    pdfTitle: "20- \u0627\u0646\u062A\u062F\u0627\u0628 \u0627\u0644\u0639\u064E\u0645\u0644\u0629"
+    videoIndex: 0
+    ReferenceURLS:
+    - https://legislation-securite.tn/sites/default/files/law/%D9%82%D8%A7%D9%86%D9%88%D9%86%20%D8%A3%D8%B3%D8%A7%D8%B3%D9%8A%20%D8%B9%D8%AF%D8%AF%2029%20%D9%84%D8%B3%D9%86%D8%A9%202018%20%D9%85%D8%A4%D8%B1%D8%AE%20%D9%81%D9%8A%209%20%D9%85%D8%A7%D9%8A%202018%20%D9%8A%D8%AA%D8%B9%D9%84%D9%82%20%D8%A8%D9%85%D8%AC%D9%84%D8%A9%20%D8%A7%D9%84%D8%AC%D9%85%D8%A7%D8%B9%D8%A7%D8%AA%20%D8%A7%D9%84%D9%85%D8%AD%D9%84%D9%8A%D8%A9.pdf
+    - https://legislation-securite.tn/ar/node/41641
+    - https://drive.google.com/file/d/1oGGaVoNKxZ56vKsnDgJ7lkW4q9Iaixzf/view
+    - 'https://wrcati.cawtar.org/preview.php?type=law&ID=286#:~:text=2005%2D08%2D15-,%D8%A7%D9%84%D9%82%D8%A7%D9%86%D9%88%D9%86%20%D8%A7%D9%84%D8%AA%D9%88%D8%AC%D9%8A%D9%87%D9%8A%20%D8%B9%D8%AF%D8%AF%2083%20%D9%84%D8%B3%D9%86%D8%A9%202005%20%D8%A7%D9%84%D9%85%D8%A4%D8%B1%D8%AE%20%D9%81%D9%8A%2015%20%D8%A3%D9%88%D8%AA,%D8%A8%D8%A7%D9%84%D9%86%D9%87%D9%88%D8%B6%20%D8%A8%D8%A7%D9%84%D8%A3%D8%B4%D8%AE%D8%A7%D8%B5%20%D8%A7%D9%84%D9%85%D8%B9%D9%88%D9%82%D9%8A%D9%86%20%D9%88%20%D8%AD%D9%85%D8%A7%D9%8A%D8%AA%D9%87%D9%85.&text=%D9%8A%D9%87%D8%AF%D9%81%20%D9%87%D8%B0%D8%A7%20%D8%A7%D9%84%D9%82%D8%A7%D9%86%D9%88%D9%86%20%D8%A5%D9%84%D9%89%20%D8%B6%D9%85%D8%A7%D9%86,%D8%A3%D9%8A%D9%91%20%D8%B4%D9%83%D9%84%20%D9%85%D9%86%20%D8%A3%D8%B4%D9%83%D8%A7%D9%84%20%D8%A7%D9%84%D8%AA%D9%85%D9%8A%D9%8A%D8%B2%20. '
+    - https://drive.google.com/file/d/18K2PmxMaQ-aLw77EhnBtXhbYNiNJ81Yj/view
+    - https://drive.google.com/file/d/1uQumNvWws0H5hxhOjAaOi6S7uVe4C9PE/view
+    - https://drive.google.com/file/d/1TJ9DznCo_JIJtyBBM4JPFDR7iFVNVUrT/view
+    - https://drive.google.com/file/d/1VfBVSx_fjctUlgLyOLGB1d2m3pnFRwSw/view
+    - https://drive.google.com/file/d/1VfBVSx_fjctUlgLyOLGB1d2m3pnFRwSw/view
+    - https://legislation-securite.tn/ar/node/41641
+  ticketImage: {fileID: 21300000, guid: 104b251ba2e7c4e45b3eb358400c6ebd, type: 3}

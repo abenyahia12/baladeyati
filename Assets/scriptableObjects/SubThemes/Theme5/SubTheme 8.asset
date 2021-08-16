@@ -16,6 +16,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3cf9965d05e23484f8861862a313e1d5, type: 2}
   - {fileID: 11400000, guid: 8827d883d675a6b4bb8ccbd6490c575a, type: 2}
   - {fileID: 11400000, guid: d5065182923685449bd1e2f2155c4db5, type: 2}
-  subThemeTitle: "\u0627\u0644\u062A\u0635\u0631\u0641 \u0641\u064A \u0627\u0644\u0645\u0631\u0627\u0641\u0642
-    \u0627\u0644\u0639\u0627\u0645\u0629 \u0627\u0644\u0645\u062D\u0644\u064A\u0629"
-  subthemeImage: {fileID: 21300000, guid: 09fa12443b63108448dc8dc4002f8a6a, type: 3}
+  - {fileID: 11400000, guid: abdeb59669e9eb84b82480ba5f618da9, type: 2}
+  - {fileID: 11400000, guid: c2fdd6e2d4e2a3d49a4456cc5a923c3e, type: 2}
+  - {fileID: 11400000, guid: f48dd0a46b89c9d4f8fc437cb9b0f352, type: 2}
+  - {fileID: 11400000, guid: 5255ae0d05e48aa4c8f37cddca01065a, type: 2}
+  - {fileID: 11400000, guid: 4793a64917db1f64f973eecb4238b64f, type: 2}
+  - {fileID: 11400000, guid: 9a5a3e63a46836d44a11a5a6156e2753, type: 2}
+  - {fileID: 11400000, guid: 4cff5a77f9123a643bf9b93da248e2da, type: 2}
+  - {fileID: 11400000, guid: d5fc79b4dcf62f945890f62861d0d8e9, type: 2}
+  - {fileID: 11400000, guid: 764d56af73b15ce46a88414a9d50de3f, type: 2}
+  subThemeTitle: "\u0627\u0644\u062A\u0646\u0645\u064A\u0629 \u0627\u0644\u0645\u062D\u0644\u064A\u0629
+    \u0648\u0627\u0644\u0627\u0633\u062A\u062B\u0645\u0627\u0631"
+  subthemeImage: {fileID: 21300000, guid: 6c853c4206ec7a9458bebb74c870ff63, type: 3}

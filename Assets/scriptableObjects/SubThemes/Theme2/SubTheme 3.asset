@@ -15,9 +15,6 @@ MonoBehaviour:
   scriptableTickets:
   - {fileID: 11400000, guid: 2fbaabe9028981d459fa6459cab73a66, type: 2}
   - {fileID: 11400000, guid: d8298e19ece645149a2384eea149fb9a, type: 2}
-  - {fileID: 11400000, guid: 6203df20496e8584192d2b573e4ec0a1, type: 2}
-  - {fileID: 11400000, guid: e9ae09df27eb21c489d129ca05131ab0, type: 2}
-  - {fileID: 11400000, guid: ae36fd706c26fed46af25db67518179f, type: 2}
-  subThemeTitle: "\u0627\u0644\u0637\u0644\u0628 \u0627\u0644\u0639\u0645\u0648\u0645\u064A
-    Commande publique"
-  subthemeImage: {fileID: 21300000, guid: 09fa12443b63108448dc8dc4002f8a6a, type: 3}
+  subThemeTitle: "\u0627\u0644\u062A\u0635\u0631\u0641 \u0641\u064A \u0627\u0644\u0639\u0642\u0627\u0631\u0627\u062A
+    \u0648\u0627\u0644\u0645\u0646\u0642\u0648\u0644\u0627\u062A"
+  subthemeImage: {fileID: 21300000, guid: c0045660193139f419366466b680a53d, type: 3}

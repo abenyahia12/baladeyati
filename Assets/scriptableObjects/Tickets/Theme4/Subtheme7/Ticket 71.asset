@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7694f70376a2e964cb13d0a08f1d69b7, type: 3}
+  m_Name: Ticket 71
+  m_EditorClassIdentifier: 
+  ticketTitle: "-75 \u0627\u0644\u062E\u062A\u0645 \u0627\u0644\u0646\u0647\u0627\u0626\u064A
+    \u0644\u0644\u0635\u0641\u0642\u0627\u062A \u0627\u0644\u0639\u0645\u0648\u0645\u064A\u0629"
+  ticketElement:
+    type: 0
+    photo: {fileID: 0}
+    text: 
+    pdfTitle: "75- \u0627\u0644\u062E\u062A\u0645 \u0627\u0644\u0646\u0647\u0627\u0626\u064A
+      \u0644\u0644\u0635\u0641\u0642\u0627\u062A \u0627\u0644\u0639\u0645\u0648\u0645\u064A\u0629"
+    videoIndex: 0
+    ReferenceURLS:
+    - https://legislation-securite.tn/ar/node/44119#:~:text=%D9%8A%D9%86%D8%B4%D8%B1%20%D9%87%D8%B0%D8%A7%20%D8%A7%D9%84%D9%82%D8%A7%D9%86%D9%88%D9%86%20%D8%A8%D8%A7%D9%84%D8%B1%D8%A7%D8%A6%D8%AF%20%D8%A7%D9%84%D8%B1%D8%B3%D9%85%D9%8A,%D9%82%D8%B1%D8%B7%D8%A7%D8%AC%20%D9%81%D9%8A%2031%20%D8%AF%D9%8A%D8%B3%D9%85%D8%A8%D8%B1%201973.&text=%D8%A7%D9%84%D9%81%D8%B5%D9%84%20%D8%A7%D9%84%D8%A3%D9%88%D9%84%20%E2%80%93%20%D8%A5%D9%86%20%D8%A7%D9%84%D9%85%D9%8A%D8%B2%D8%A7%D9%86%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9,%D9%84%D9%84%D8%B5%D9%8A%D8%BA%20%D8%A7%D9%84%D9%85%D9%82%D8%B1%D8%B1%D8%A9%20%D8%A8%D8%A7%D9%84%D9%82%D8%A7%D9%86%D9%88%D9%86%20%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D9%8A%20%D9%84%D9%84%D9%85%D9%8A%D8%B2%D8%A7%D9%86%D9%8A%D8%A9.
+    - https://drive.google.com/file/d/1od3pmESm5MWfsj3S-tbS1GF-muh1WWOD/view
+    - https://drive.google.com/file/d/1od3pmESm5MWfsj3S-tbS1GF-muh1WWOD/view
+    - https://drive.google.com/file/d/1od3pmESm5MWfsj3S-tbS1GF-muh1WWOD/view
+    - https://legislation-securite.tn/ar/node/44740
+  ticketImage: {fileID: 21300000, guid: dbe3396bc07fbbc4aaa0900a865057db, type: 3}

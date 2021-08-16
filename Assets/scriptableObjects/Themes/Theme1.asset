@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c36111579aaa0b49961f262cd78bdab, type: 3}
   m_Name: Theme1
   m_EditorClassIdentifier: 
+  themeColor: {r: 0.92941177, g: 0.21960784, b: 0.5921569, a: 1}
   scriptableSubThemes:
   - {fileID: 11400000, guid: a1223cb44db508849a4016db3812dd5f, type: 2}
   - {fileID: 11400000, guid: bb47cccc0db5d8449b99acf1e4377c38, type: 2}
   - {fileID: 11400000, guid: 5cc97bf823c99384e8d312f628c32865, type: 2}
   - {fileID: 11400000, guid: e2244cb62d945d7478f00d79eea7fa70, type: 2}
-  themeTitle: "\u0627\u0644\u062D\u064A\u0627\u0629 \u0627\u0644\u0628\u0644\u062F\u064A\u0629
-    Vie Communale"
+  themeTitle: "\u0627\u0644\u0647\u064A\u0627\u0643\u0644 \u0648\u0627\u0644\u062D\u064A\u0627\u0629
+    \u0627\u0644\u0628\u0644\u062F\u064A\u0629"
   videoName: astrid.mp4
-  themeImage: {fileID: 21300000, guid: d669c112e2eb2e545888f30774f5f079, type: 3}
+  themeImage: {fileID: 21300000, guid: b4980e882bc903d40a06aee017ae76d8, type: 3}

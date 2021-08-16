@@ -12,11 +12,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7694f70376a2e964cb13d0a08f1d69b7, type: 3}
   m_Name: Ticket87
   m_EditorClassIdentifier: 
-  ticketTitle: "(2) \u062D\u0627\u0644\u0627\u062A \u0627\u0644\u0645\u0648\u0638\u0641"
+  ticketTitle: "-88 \u0625\u0639\u062F\u0627\u062F \u0648\u062A\u0646\u0641\u064A\u0630
+    \u0645\u062B\u0627\u0644 \u0627\u0644\u062A\u0647\u064A\u0626\u0629 \u0627\u0644\u062A\u0641\u0635\u064A\u0644\u064A
+    \u0648\u0628\u0631\u0646\u0627\u0645\u062C \u0627\u0644\u062A\u062F\u062E\u0644
+    \u0627\u0644\u0639\u0642\u0627\u0631\u064A"
   ticketElement:
     type: 0
     photo: {fileID: 0}
     text: 
-    pdfTitle: fiche_type
-    videoName: 
-  ticketImage: {fileID: 0}
+    pdfTitle: "88- \u0625\u0639\u062F\u0627\u062F \u0648\u062A\u0646\u0641\u064A\u0630
+      \u0645\u062B\u0627\u0644 \u0627\u0644\u062A\u0647\u064A\u0626\u0629 \u0627\u0644\u062A\u0641\u0635\u064A\u0644\u064A
+      \u0648\u0628\u0631\u0646\u0627\u0645\u062C \u0627\u0644\u062A\u062F\u062E\u0644
+      \u0627\u0644\u0639\u0642\u0627\u0631\u064A"
+    videoIndex: 0
+    ReferenceURLS:
+    - https://legislation-securite.tn/sites/default/files/law/%D9%82%D8%A7%D9%86%D9%88%D9%86%20%D8%A3%D8%B3%D8%A7%D8%B3%D9%8A%20%D8%B9%D8%AF%D8%AF%2029%20%D9%84%D8%B3%D9%86%D8%A9%202018%20%D9%85%D8%A4%D8%B1%D8%AE%20%D9%81%D9%8A%209%20%D9%85%D8%A7%D9%8A%202018%20%D9%8A%D8%AA%D8%B9%D9%84%D9%82%20%D8%A8%D9%85%D8%AC%D9%84%D8%A9%20%D8%A7%D9%84%D8%AC%D9%85%D8%A7%D8%B9%D8%A7%D8%AA%20%D8%A7%D9%84%D9%85%D8%AD%D9%84%D9%8A%D8%A9.pdf
+    - http://www.arp.tn/site/servlet/Fichier?code_obj=21822&code_exp=1&langue=1
+    - http://www.arp.tn/site/servlet/Fichier?code_obj=73128&code_exp=1&langue=1#:~:text=%D8%A7%D9%84%D8%AA%D9%87%D9%8A%D8%A6%D8%A9%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A7%D8%A8%D9%8A%D8%A9%20%D9%88%D8%A7%D9%84%D8%AA%D8%B9%D9%85%D9%8A%D8%B1-,%D9%82%D8%A7%D9%86%D9%88%D9%86%20%D8%B9%D8%AF%D8%AF%2029%20%D9%84%D8%B3%D9%86%D8%A9%202009%20%D9%85%D8%A4%D8%B1%D8%AE%20%D9%81%D9%8A%209%20%D8%AC%D9%88%D8%A7%D9%86%202009,%D9%88%D8%A5%D8%AA%D9%85%D8%A7%D9%85%20%D9%85%D8%AC%D9%84%D8%A9%20%D8%A7%D9%84%D8%AA%D9%87%D9%8A%D8%A6%D8%A9%20%D8%A7%D9%84%D8%AA%D8%B1%D8%A7%D8%A8%D9%8A%D8%A9%20%D9%88%D8%A7%D9%84%D8%AA%D8%B9%D9%85%D9%8A%D8%B1.&text=%D8%A7%D9%84%D9%81%D8%B5%D9%84%2032%20(%D8%AC%D8%AF%D9%8A%D8%AF)%20%3A%20%D9%8A%D8%AA%D9%88%D9%84%D9%89,%D8%A7%D9%84%D9%85%D8%AC%D9%84%D8%A9%20%D9%88%D8%B9%D9%84%D9%89%20%D9%85%D8%AB%D8%A7%D9%84%20%D8%AA%D9%87%D9%8A%D8%A6%D8%A9%20%D8%AA%D9%81%D8%B5%D9%8A%D9%84%D9%8A.
+    - https://drive.google.com/file/d/18VY1v3z_Fg4WAjrYRLyb_Vk4yaa0thhF/view
+    - https://drive.google.com/file/d/1oAtFk-m1KtxdJ2MIrktj6d8JSvcvKhxG/view
+    - https://drive.google.com/file/d/1U6YTYE7im87_Kqy_u3I0oFnIbcjybCjl/view
+    - http://www.arp.tn/site/servlet/Fichier?code_obj=21822&code_exp=1&langue=10
+    - http://www.arp.tn/site/servlet/Fichier?code_obj=21822&code_exp=1&langue=6
+    - http://www.arp.tn/site/servlet/Fichier?code_obj=21822&code_exp=1&langue=10
+    - http://www.arp.tn/site/servlet/Fichier?code_obj=21822&code_exp=1&langue=7
+    - https://drive.google.com/file/d/18VY1v3z_Fg4WAjrYRLyb_Vk4yaa0thhF/view
+    - https://drive.google.com/file/d/1oAtFk-m1KtxdJ2MIrktj6d8JSvcvKhxG/view
+    - http://www.arp.tn/site/servlet/Fichier?code_obj=21822&code_exp=1&langue=9
+    - http://www.ruedemalte.com/lois2/k2013_47.html
+    - https://drive.google.com/file/d/1uwqRLc11BVFup8FA6q8NM3DrlLJvf9Nq/view
+    - http://www.arp.tn/site/servlet/Fichier?code_obj=21822&code_exp=1&langue=8
+    - http://www.arp.tn/site/servlet/Fichier?code_obj=21822&code_exp=1&langue=12
+    - http://www.arp.tn/site/servlet/Fichier?code_obj=21822&code_exp=1&langue=11
+  ticketImage: {fileID: 21300000, guid: dbd1d206e60f5024ba43f2cc446e3e45, type: 3}

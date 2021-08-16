@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
@@ -7,14 +8,13 @@ public class AzizVideoManager : MonoBehaviour
 {
     [SerializeField] RawImage m_PlayTexture;
     [SerializeField] VideoPlayer m_VideoPlayer;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        m_VideoPlayer.source = VideoSource.Url;
-    }
+
+
+
+  
     public void StartVideo()
     {
+
         m_VideoPlayer.Play();
         m_PlayTexture.color = Color.white;
     }

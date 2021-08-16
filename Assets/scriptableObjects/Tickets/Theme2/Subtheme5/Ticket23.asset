@@ -12,12 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7694f70376a2e964cb13d0a08f1d69b7, type: 3}
   m_Name: Ticket23
   m_EditorClassIdentifier: 
-  ticketTitle: "\u0627\u0644\u062A\u0635\u0631\u0641 \u0641\u064A \u0648\u0643\u0627\u0644\u0627\u062A
-    \u0627\u0644\u0645\u0642\u0627\u0628\u064A\u0636"
+  ticketTitle: "-23 \u062D\u0627\u0644\u0627\u062A \u0627\u0644\u0645\u0648\u0638\u0641
+    \u0627\u0644\u0639\u0645\u0648\u0645\u064A-\u062D\u0627\u0644\u062A\u0627 \u0627\u0644\u0645\u0628\u0627\u0634\u0631\u0629
+    \u0648\u0639\u062F\u0645 \u0627\u0644\u0645\u0628\u0627\u0634\u0631\u0629"
   ticketElement:
     type: 0
     photo: {fileID: 0}
     text: 
-    pdfTitle: fiche_type
-    videoName: 
-  ticketImage: {fileID: 0}
+    pdfTitle: "23- \u062D\u0627\u0644\u0627\u062A \u0627\u0644\u0645\u0648\u0638\u0641
+      \u0627\u0644\u0639\u0645\u0648\u0645\u064A-\u062D\u0627\u0644\u062A\u0627 \u0627\u0644\u0645\u0628\u0627\u0634\u0631\u0629
+      \u0648\u0639\u062F\u0645 \u0627\u0644\u0645\u0628\u0627\u0634\u0631\u0629"
+    videoIndex: 0
+    ReferenceURLS:
+    - https://legislation-securite.tn/ar/node/41641
+    - http://www.anc.tn/site/servlet/Fichier?code_obj=21932&code_exp=1&langue=1#:~:text=%D9%82%D8%A7%D9%86%D9%88%D9%86%20%D8%B9%D8%AF%D8%AF%20105%20%D9%84%D8%B3%D9%86%D8%A9%201995,%D9%88%D8%A7%D9%84%D8%B9%D8%AC%D8%B2%20%D9%88%D8%A7%D9%84%D8%A8%D8%A7%D9%82%D9%8A%D9%86%20%D8%B9%D9%84%D9%89%20%D9%82%D9%8A%D8%AF%20%D8%A7%D9%84%D8%AD%D9%8A%D8%A7%D8%A9.&text=%D8%A7%D9%84%D9%81%D8%B5%D9%84%201%3A&text=%D9%88%D8%AA%D8%B6%D8%A7%D9%81%20%D9%87%D8%B0%D9%87%20%D8%A7%D9%84%D9%81%D8%AA%D8%B1%D8%A7%D8%AA%20%D9%84%D9%81%D8%AA%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D9%86%D8%B4%D8%A7%D8%B7,%D8%B9%D9%84%D9%89%20%D9%82%D9%8A%D8%AF%20%D8%A7%D9%84%D8%AD%D9%8A%D8%A7%D8%A9%20%D8%A3%D9%88%20%D8%AA%D8%B5%D9%81%D9%8A%D8%AA%D9%87%D8%A7.
+    - https://drive.google.com/file/d/1g7iILel91BOwKW8p2WhnMVs42uuI66Mq/view
+    - https://legislation-securite.tn/ar/node/41643
+    - https://legislation-securite.tn/ar/node/41644
+  ticketImage: {fileID: 21300000, guid: fb077e640dd3658478772e80986ffd19, type: 3}

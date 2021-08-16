@@ -31,8 +31,7 @@ namespace Paroxe.PdfRenderer.Internal.Viewer
 
 #if UNITY_IOS || UNITY_ANDROID
 			HandleScroll(velocity, direction, m_MobileVelocity);
-#elif UNITY_STANDALONE_OSX || UNITY_STANDALONE_WIN || UNITY_EDITOR
-HandleDesktop(velocity, direction, m_Velocity);
+
 #endif
 
 			m_ZoomCanvasGroup.alpha -= Time.deltaTime * m_FadeSpeed;

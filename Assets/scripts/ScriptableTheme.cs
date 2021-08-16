@@ -7,6 +7,7 @@ using UnityEngine;
 [Serializable]
 public class ScriptableTheme : ScriptableObject
 {
+    public Color themeColor;
     public ScriptableSubTheme[] scriptableSubThemes;
     public string themeTitle;
     public string videoName;

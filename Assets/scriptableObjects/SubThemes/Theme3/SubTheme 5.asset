@@ -17,9 +17,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a9cc928a0c4580d4ebcd4112ebd1fd13, type: 2}
   - {fileID: 11400000, guid: d7c9f1a0353500e48959a7183206404c, type: 2}
   - {fileID: 11400000, guid: f8157c01a10afcb418f12c51906f0b01, type: 2}
-  - {fileID: 11400000, guid: a9cbf75c0fd6c2a4289ed022242b781f, type: 2}
-  - {fileID: 11400000, guid: 1ea6453303b517f41a93fab344bb6a83, type: 2}
-  - {fileID: 11400000, guid: b5a5c9d7382139945be26dc879809786, type: 2}
-  - {fileID: 11400000, guid: c8bb1852bac53bf478dbbf12232d1300, type: 2}
-  subThemeTitle: "\u0627\u0644\u062A\u0647\u064A\u0626\u0629 \u0627\u0644\u0639\u0645\u0631\u0627\u0646\u064A\u0629"
-  subthemeImage: {fileID: 21300000, guid: 09fa12443b63108448dc8dc4002f8a6a, type: 3}
+  subThemeTitle: "\u0627\u0644\u0646\u0638\u0627\u0641\u0629 \u0648\u0631\u0641\u0639
+    \u0627\u0644\u0646\u0641\u0627\u064A\u0627\u062A"
+  subthemeImage: {fileID: 21300000, guid: 0d748d7ffb5e53d4fa38a22146df5619, type: 3}

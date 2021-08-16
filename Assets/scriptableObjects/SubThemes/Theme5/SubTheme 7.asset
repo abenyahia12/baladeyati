@@ -21,12 +21,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ad56e1b769d80504f9e009060d782b41, type: 2}
   - {fileID: 11400000, guid: 91fcd0a660c4a404fbf51e1db0ae6136, type: 2}
   - {fileID: 11400000, guid: ff4f90a459cf8fa4d87d5349383461fc, type: 2}
-  - {fileID: 11400000, guid: ece0fe41a07b9254ea98d639f6bf07a3, type: 2}
-  - {fileID: 11400000, guid: 0f36de26fac38b64d9a0ed2b65d81597, type: 2}
-  - {fileID: 11400000, guid: 6fb75eb47e25bd546a6ff8b052ec1b00, type: 2}
-  - {fileID: 11400000, guid: 16caebb725b6c3b44af995ed9df1a824, type: 2}
-  - {fileID: 11400000, guid: 05e434906ff126a42936338b7fe9551a, type: 2}
-  - {fileID: 11400000, guid: ca82d6c7bfa61224190753c920c934c6, type: 2}
-  subThemeTitle: "\u0627\u0644\u062A\u0635\u0631\u0641 \u0641\u064A \u0627\u0644\u0645\u0648\u0627\u0631\u062F
-    \u0627\u0644\u0628\u0634\u0631\u064A\u0629 >br< La gestion des ressources humaines"
-  subthemeImage: {fileID: 21300000, guid: 09fa12443b63108448dc8dc4002f8a6a, type: 3}
+  subThemeTitle: "\u0627\u0644\u062A\u0647\u064A\u0626\u0629 \u0627\u0644\u0639\u0645\u0631\u0627\u0646\u064A\u0629"
+  subthemeImage: {fileID: 21300000, guid: 6b12997acde474e45bad71e4fd0d5051, type: 3}

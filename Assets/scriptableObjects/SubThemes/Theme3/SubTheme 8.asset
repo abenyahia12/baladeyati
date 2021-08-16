@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de39d01b5bee70c489c69e4831121ee7, type: 3}
+  m_Name: SubTheme 8
+  m_EditorClassIdentifier: 
+  scriptableTickets:
+  - {fileID: 11400000, guid: 16277de32d88da947953f208cf56edcf, type: 2}
+  - {fileID: 11400000, guid: 4485034386fc5bd4689703e4d96269f1, type: 2}
+  subThemeTitle: "\u062C\u0648\u062F\u0629 \u0627\u0644\u062D\u064A\u0627\u0629"
+  subthemeImage: {fileID: 21300000, guid: 0a4c5177acad1da48954bee849e8a9ea, type: 3}
