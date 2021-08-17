@@ -33,6 +33,7 @@ public class ContentManager : MonoBehaviour
     public Button videoButton;
     public Dictionary<string,GameObject> SearchObjs=new Dictionary<string, GameObject>();
     public TMP_InputField searchText;
+    public TextMeshProUGUI copiedSearchText;
     public GameObject loop;
     public TextMeshProUGUI SubThemesThemeTitle;
     public string subthemename;
@@ -178,7 +179,7 @@ public class ContentManager : MonoBehaviour
         foreach (var item in SearchObjs)
         {
 
-            if (ArabicFixer.Fix(item.Key).Contains(searchText.text))
+            if ( (item.Key.Contains(searchText.text)) || (item.Key.Contains(copiedSearchText.text))||(ArabicFixer.Fix(item.Key).Contains(searchText.text)||(ArabicFixer.Fix(item.Key).Contains(copiedSearchText.text))))
             {
                 item.Value.SetActive(true);
             }
