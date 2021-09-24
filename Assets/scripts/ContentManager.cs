@@ -172,6 +172,7 @@ public class ContentManager : MonoBehaviour
     }
     void CleanSearchObjs()
     {
+        searchText.text = "";
         SearchObjs.Clear();
     }
     public void Search()
